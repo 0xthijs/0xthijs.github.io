@@ -1,5 +1,3 @@
-# hr-analytics-portfolio
-
 # IBM HR Analytics: Attrition & Retention Strategies
 **Project Status:** [In Progress]
 
