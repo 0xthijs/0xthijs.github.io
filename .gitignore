@@ -1,10 +1,35 @@
-# Hugo default output
+# --- Standard Hugo & OS ---
 /public
 /resources
 /.hugo_build.lock
-
-# OS X
 .DS_Store
-
-# Windows
 Thumbs.db
+
+# --- Python & Virtual Envs ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+env/
+venv/
+*.log
+
+# --- SECURITY (Critical) ---
+.env
+secrets.json
+
+# --- Data Safety (Deny by Default) ---
+*.csv
+*.parquet
+*.xlsx
+*.xls
+*.json
+*.sqlite
+*.db
+
+# --- Whitelist (Allow Specific Portfolio Assets) ---
+!data-lab/01-ibm-attrition/IBM_HR_Employee_Attrition.csv
+!hugo.toml
+!hugo.yaml
+!package.json

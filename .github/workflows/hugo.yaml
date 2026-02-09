@@ -23,8 +23,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.128.0 # Using explicit version based on 'latest' request to be safe, or just 'latest' as requested. User said 'latest'.
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
