@@ -20,15 +20,15 @@ graph TD
     B --> E(Compliance)
 
     C --> C1[Promotion Curse]
-    C1 --> C2[17% Attrition <br/>(Recently Promoted)]
+    C1 --> C2["17% Attrition <br/>(Recently Promoted)"]
     style C2 fill:#ffcccc,stroke:#333,stroke-width:2px
 
     D --> D1[Burnout Risk]
-    D1 --> D2[39% Attrition <br/>(High Risk Segment)]
+    D1 --> D2["39% Attrition <br/>(High Risk Segment)"]
     style D2 fill:#ff9999,stroke:#333,stroke-width:2px
 
     E --> E1[Diversity Health]
-    E1 --> E2[Pay Gap < 2% <br/>(Target Achieved)]
+    E1 --> E2["Pay Gap < 2% <br/>(Target Achieved)"]
     style E2 fill:#ccffcc,stroke:#333,stroke-width:2px
 ```
 
