@@ -1,5 +1,7 @@
 # 🧠 Human-Centric Intelligence
 
+![Human-Centric Intelligence](static/images/header.png)
+
 > **Turning HR data into board-level decisions — with AI as a co-pilot, not a crutch.**
 
 I'm a Senior HRBP who builds AI-powered analytics tools to answer the questions that keep us up at night: *Why are our best people leaving? Where is burnout hiding? Is our pay equitable?*
