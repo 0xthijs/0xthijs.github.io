@@ -2,7 +2,7 @@
 
 > **Turning HR data into board-level decisions — with AI as a co-pilot, not a crutch.**
 
-I'm a Senior HRBP who builds AI-powered analytics tools to answer the questions that keep CHROs up at night: *Why are our best people leaving? Where is burnout hiding? Is our pay equitable?*
+I'm a Senior HRBP who builds AI-powered analytics tools to answer the questions that keep us up at night: *Why are our best people leaving? Where is burnout hiding? Is our pay equitable?*
 
 This repository is my working lab — every project solves a real HR problem, and every line of code was built using an AI-first workflow.
 
