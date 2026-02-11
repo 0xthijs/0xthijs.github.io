@@ -33,3 +33,6 @@ secrets.json
 !hugo.toml
 !hugo.yaml
 !package.json
+!data-lab/analytics-legacy/IBM_HR_Employee_Attrition.csv
+!data-lab/analytics-legacy/hr_database.db
+!data-lab/job-intelligence/sources.json
