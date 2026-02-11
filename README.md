@@ -45,7 +45,8 @@ I don't just *use* AI — I build *with* AI. Every project in this repo was deve
 | Layer | Tools |
 |:------|:------|
 | **Analytics** | Python · Pandas · Matplotlib |
-| **AI / LLM** | Google Gemini 2.0 Flash · Structured Prompts |
+| **AI / LLM** | Google Gemini 2.0 Flash · Google AI Studio · Structured Prompts |
+| **AI Agents** | Google Antigravity · AI Pair Programming |
 | **Automation** | Playwright · Async Python |
 | **Platform** | Hugo · PaperMod · GitHub Pages |
 | **Data** | SQL · CSV · SQLite |

@@ -8,6 +8,8 @@
 
 | Tool | Role | Where Used |
 |:-----|:-----|:-----------|
+| **Google Antigravity** | AI coding agent for pair programming, architecture, and documentation | All projects |
+| **Google AI Studio** | Prompt prototyping, model testing, and API key management | [Job Intelligence](data-lab/job-intelligence/) |
 | **Google Gemini 2.0 Flash** | LLM for job analysis, classification, salary inference | [Job Intelligence](data-lab/job-intelligence/) |
 | **AI Pair Programming (Gemini)** | Code generation, debugging, refactoring, data validation | All projects |
 | **Structured Prompting** | JSON-schema-enforced outputs with injection guards | [analyzer.py](data-lab/job-intelligence/analyzer.py) |

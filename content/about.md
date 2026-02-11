@@ -28,7 +28,8 @@ I sit at the intersection of **People Operations** and **AI Engineering**. While
 | Category | Tools |
 |:---------|:------|
 | **Analytics** | Python · Pandas · Matplotlib · SQL |
-| **AI / LLM** | Google Gemini 2.0 Flash · Structured Prompting |
+| **AI / LLM** | Google Gemini 2.0 Flash · Google AI Studio · Structured Prompting |
+| **AI Agents** | Google Antigravity · AI Pair Programming |
 | **Automation** | Playwright · Async Python |
 | **Platform** | Hugo · Git · GitHub Actions |
 
