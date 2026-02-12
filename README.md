@@ -8,6 +8,8 @@ I am a Senior HRBP developing AI-powered analytics tools to address critical bus
 
 This repository serves as a portfolio of practical solutions — each project addresses a specific HR challenge, built using an AI-integrated workflow.
 
+> **Note:** This repository is a personal experimentation platform. It represents my journey develops AI-driven HR solutions, serving as a sandbox for testing new technologies and showcasing my evolving skillset.
+
 ---
 
 ## Portfolio at a Glance
@@ -18,6 +20,7 @@ This repository serves as a portfolio of practical solutions — each project ad
 | 02 | [Promotion Velocity](data-lab/02-promotion-velocity/) | Does promotion impact retention? | **No.** Recently promoted employees are *more* likely to leave (17% vs 14%) | Proposed "Post-Promotion Engagement" initiative |
 | 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict burnout risk? | High-risk employees leave at **39%** — 4x the baseline | Identified 64 employees for proactive retention discussions |
 | 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is pay equitable? | Pay gap < 2% ✅ — executive representation is **34% female** | Recommended pipeline review for Level 4 → 5 progression |
+| 05 | [Job Market Intelligence](data-lab/job-intelligence/) | What skills are actually in demand? | AI Agents scrape & analyze job data for real-time market insights | Automated "Voice of the Market" strategy reports |
 | 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
 | 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
 
