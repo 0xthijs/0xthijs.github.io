@@ -6,19 +6,19 @@ draft: false
 
 # Thijs van der Aa
 
-**Senior HRBP → AI-Augmented HR Product Owner**
+**Senior HRBP & AI Product Owner**
 
-> I reduce regrettable attrition by turning workforce data into automated, AI-powered decision tools — so CHROs act on evidence, not instinct.
+> Focusing on data-driven workforce strategies and automated decision support tools.
 
 ---
 
 ## What I Do
 
-I sit at the intersection of **People Operations** and **AI Engineering**. While most HRBPs rely on gut feel and exit interviews, I build tools that surface workforce risks *before* they become resignations.
+My work combines **People Operations** with **AI Engineering**. I develop tools that identify workforce risks proactively, providing data to support retention strategies.
 
 **Recent results from my Data Lab:**
-- Identified **64 employees** at 4x burnout risk using a composite scoring model
-- Discovered the "Promotion Curse" — recently promoted talent leaves at **17%** vs 14% for stagnant peers
+- Identified **64 employees** with elevated burnout risk factors.
+- Analyzed promotion data, finding a higher attrition rate (**17%**) among recently promoted employees compared to peers (14%).
 - Validated **< 2% pay gap** across all job levels in a full diversity audit
 
 ---

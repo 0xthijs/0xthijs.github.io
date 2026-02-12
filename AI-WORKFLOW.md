@@ -1,6 +1,6 @@
 # AI Workflow: How I Build With AI
 
-> This document is proof-of-work. It shows *how* AI was used in each project — not just *that* it was used.
+> This document outlines the specific AI methodologies applied in each project.
 
 ---
 
@@ -19,29 +19,29 @@
 ## Per-Project AI Usage
 
 ### 01 — IBM Attrition Analysis
-**AI Role:** Analytical Co-pilot
+**AI Application:** Analysis Support
 
-- **Problem Framing:** Used AI to brainstorm which variables would be most predictive of attrition based on HR domain knowledge.
-- **Script Generation:** The `analysis.py` and `audit_analysis.py` scripts were built through iterative AI prompting — starting from a natural language description of the KPIs needed, then refining the Pandas logic.
-- **Data Audit:** Prompted AI to generate a validation script that checks sample sizes (n > 30) and statistical integrity — a step I wouldn't have prioritized without AI surfacing the risk.
+- **Problem Framing:** Identification of predictive variables based on HR domain knowledge.
+- **Script Generation:** Iterative development of `analysis.py` and `audit_analysis.py` to define KPIs and implement Pandas logic.
+- **Data Audit:** Automated generation of validation scripts to check sample sizes and statistical integrity.
 
 ### 02 — Promotion Velocity
-**AI Role:** Hypothesis Challenger
+**AI Application:** Hypothesis Testing
 
-- **Insight Discovery:** The "Promotion Curse" finding (recently promoted employees leave *more*) was counter-intuitive. AI helped reframe this by suggesting alternative interpretations: marketability, title shopping, expectations gap.
-- **Visualization:** Used AI to generate the Matplotlib chart configuration for comparing stagnant vs. propelled attrition rates.
+- **Insight Discovery:** Analysis of attrition rates among promoted employees versus non-promoted peers.
+- **Visualization:** Generation of Matplotlib configurations for comparative analysis.
 
 ### 03 — Burnout Risk Index
-**AI Role:** Methodology Designer
+**AI Application:** Methodology Design
 
-- **Scoring Model:** The weighted burnout score (0–100) was co-designed with AI. I provided the HR domain factors (overtime, commute, work-life balance), and AI helped assign weights and normalize the composite score.
-- **Segmentation:** AI recommended the 3-tier risk segmentation (High/Moderate/Low) and suggested that 60+ was the appropriate "High Risk" threshold based on the data distribution.
+- **Scoring Model:** Collaborative design of a weighted burnout score (0–100) incorporating multiple HR factors.
+- **Segmentation:** Establishment of risk thresholds (High/Moderate/Low) based on data distribution.
 
 ### 04 — Diversity & Equity Audit
-**AI Role:** Framework Builder
+**AI Application:** Framework Development
 
-- **Adjusted Pay Gap Methodology:** AI helped design the "within-level" comparison methodology — comparing male and female pay *at the same job level* instead of using a simple average, which would produce misleading results.
-- **Audit Script:** AI generated the `audit.py` data quality checks to ensure no job level had fewer than 10 employees of either gender.
+- **methodology:** Design of "within-level" pay gap comparison to ensure accurate analysis.
+- **Audit Script:** Generation of `audit.py` for data quality checks and minimum sample size verification.
 
   ```
 - **JSON Schema Enforcement:** The prompt requires the LLM to return a strict JSON object, which is then parsed and used for filtering decisions.
@@ -51,9 +51,9 @@
 
 ## My Prompting Philosophy
 
-1. **Start with the business question**, not the code. I tell AI what decision I need to make, not what function to write.
-2. **Validate everything.** Every project has an `audit.py` script that independently verifies the analysis — because AI can hallucinate pandas logic too.
-3. **Document the "why."** AI-generated code without context is tech debt. Each project README explains the hypothesis, methodology, and interpretation.
+1. **Define the business question.** I focus on the decision required, which guides the technical implementation.
+2. **Validate outputs.** Independent audit scripts (e.g., `audit.py`) define logic to verify analysis results.
+3. **Document the methodology.** Context is essential. Each project README explains the hypothesis, methodology, and interpretation.
 
 ---
 
@@ -61,7 +61,7 @@
 
 | Competency | Evidence |
 |:-----------|:---------|
-| **AI-Augmented Development** | Every project was built faster because of AI — not copy-pasted from a tutorial |
-| **Prompt Engineering** | Structured prompts with injection guards, JSON schemas, and graceful fallbacks |
-| **Critical Thinking** | AI suggested; I validated. Every finding has an `audit.py` counterpart |
+| **AI-Augmented Development** | Accelerated project delivery through AI integration |
+| **Prompt Engineering** | Use of structured prompts and validation mechanisms |
+| **Critical Thinking** | Verification of AI suggestions with independent audit scripts |
 | **Product Thinking** | Job Intelligence is a full AI agent pipeline: scrape → analyze → report |

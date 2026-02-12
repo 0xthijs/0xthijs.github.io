@@ -2,11 +2,11 @@
 
 ![Human-Centric Intelligence](static/images/header.png)
 
-> **Turning HR data into board-level decisions — with AI as a co-pilot, not a crutch.**
+> **Leveraging HR data for strategic decision-making — with AI as a co-pilot.**
 
-I'm a Senior HRBP who builds AI-powered analytics tools to answer the questions that keep us up at night: *Why are our best people leaving? Where is burnout hiding? Is our pay equitable?*
+I am a Senior HRBP developing AI-powered analytics tools to address critical business questions: *Why are high performers leaving? What are the indicators of burnout? is pay equitable across the organization?*
 
-This repository is my working lab — every project solves a real HR problem, and every line of code was built using an AI-first workflow.
+This repository serves as a portfolio of practical solutions — each project addresses a specific HR challenge, built using an AI-integrated workflow.
 
 ---
 
@@ -14,30 +14,29 @@ This repository is my working lab — every project solves a real HR problem, an
 
 | # | Project | Business Question | Key Finding | Impact |
 |:--|:--------|:------------------|:------------|:-------|
-| 01 | [Attrition Analysis](data-lab/01-ibm-attrition/) | Why are high performers leaving? | Employees with a new manager have **32% attrition** — 3x the norm | Recommended "Manager Transition Onboarding" program |
-| 02 | [Promotion Velocity](data-lab/02-promotion-velocity/) | Does promoting people retain them? | **No.** Recently promoted employees are *more* likely to leave (17% vs 14%) | Proposed "Post-Promotion Re-recruitment" initiative |
-| 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict who will burn out? | High-risk employees leave at **39%** — 4x the baseline | Flagged 64 employees for immediate retention interviews |
-| 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is our pay equitable? | Pay gap < 2% ✅ — but exec representation is only **34% female** | Recommended pipeline review for Level 4 → 5 progression |
-| 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can we start onboarding before day one? | Gamified checklists reduce Day 1 anxiety | Zero-config, browser-based deployment |
-| 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can we automate manual contract drafting? | Real-time validation prevents errors | 100% Client-side privacy & zero backend |
+| 01 | [Attrition Analysis](data-lab/01-ibm-attrition/) | Why are high performers leaving? | Employees with a new manager show **32% attrition** — 3x the average | Recommended "Manager Transition Onboarding" program |
+| 02 | [Promotion Velocity](data-lab/02-promotion-velocity/) | Does promotion impact retention? | **No.** Recently promoted employees are *more* likely to leave (17% vs 14%) | Proposed "Post-Promotion Engagement" initiative |
+| 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict burnout risk? | High-risk employees leave at **39%** — 4x the baseline | Identified 64 employees for proactive retention discussions |
+| 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is pay equitable? | Pay gap < 2% ✅ — executive representation is **34% female** | Recommended pipeline review for Level 4 → 5 progression |
+| 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
+| 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
 
 ---
 
 ## 📌 Featured: Q1 2026 Executive Strategy Brief
 
-> *This is what "HRBP meets AI" looks like in practice.*
+> *Practical application of AI in HR Strategy.*
 
-My [Q1 2026 Board Update](content/reports/q1-2026-board-update.md) synthesizes all four analytics projects into a single executive brief with risk categories, Mermaid diagrams, and concrete recommendations. It's the artifact I'd present to a CHRO.
+The [Q1 2026 Board Update](content/reports/q1-2026-board-update.md) consolidates insights from four analytics projects into an executive brief, complete with risk assessments, diagrams, and actionable recommendations.
 
 ---
 
 ## How I Work: AI-First Methodology
 
-I don't just *use* AI — I build *with* AI. Every project in this repo was developed using a structured AI workflow:
+I integrate AI tools throughout the development process. This repository demonstrates a structured workflow:
 
-
-- **AI Pair Programming** → Code generation, debugging, and data validation
-- **Prompt Engineering** → Structured prompts with injection guards and JSON schema enforcement
+- **AI Pair Programming** for efficient code generation, debugging, and validation.
+- **Structured Prompting** using proven techniques for reliable outputs.
 
 📄 **Full details:** [AI-WORKFLOW.md](AI-WORKFLOW.md)
 

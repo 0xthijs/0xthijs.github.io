@@ -1,6 +1,6 @@
 # Development Guide
 
-> Technical details for building, running, and deploying this portfolio.
+> Technical details for building, running, and deploying the portfolio.
 
 ## Prerequisites
 
