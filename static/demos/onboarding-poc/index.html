@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Aboard! 🚀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome Aboard! 🚀</h1>
+            <p>We're thrilled to have you join the team. Let's get you set up.</p>
+        </header>
+
+        <section class="progress-section">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p id="progressText">0% Complete</p>
+        </section>
+
+        <section class="checklist-section">
+            <ul id="checklist">
+                <!-- Checklist items will be injected here by JS -->
+            </ul>
+        </section>
+
+        <section class="controls">
+            <button id="resetBtn" class="secondary-btn">Reset Progress</button>
+        </section>
+    </div>
+
+    <div id="confetti-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #4a90e2;
+    --success-color: #2ecc71;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --secondary-text: #666;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+}
+
+.progress-section {
+    margin-bottom: 2rem;
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--success-color);
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--secondary-text);
+}
+
+.checklist-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.checklist-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checklist-item:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+}
+
+.checklist-item.completed {
+    background-color: #f9f9f9;
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 1rem;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 2rem;
+}
+
+.secondary-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--secondary-text);
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    background-color: #eee;
+    color: var(--text-color);
+}
+
+/* Simple Confetti CSS */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
