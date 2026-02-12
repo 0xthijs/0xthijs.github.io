@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Team Canvas 🎨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Talent Pool -->
+        <aside class="sidebar left-sidebar">
+            <h2>Talent Pool</h2>
+            <p class="subtitle">Drag to Canvas</p>
+
+            <div id="human-pool" class="pool-section">
+                <h3>Humans 👤</h3>
+                <!-- Injected via JS -->
+            </div>
+
+            <div id="ai-pool" class="pool-section">
+                <h3>AI Agents 🤖</h3>
+                <!-- Injected via JS -->
+            </div>
+        </aside>
+
+        <!-- Main Canvas: Org Chart -->
+        <main class="canvas-area">
+            <header>
+                <h1>Hybrid Team Canvas</h1>
+                <div class="actions">
+                    <button id="resetBtn" class="btn secondary">Reset</button>
+                    <button id="exportBtn" class="btn primary">Export Architecture</button>
+                </div>
+            </header>
+
+            <div class="org-chart-container" id="orgChart">
+                <!-- Org Chart Tree -->
+                <div class="node-slot root-slot" data-slot-id="root">
+                    <div class="placeholder">Drop Leader Here</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar: Metrics -->
+        <aside class="sidebar right-sidebar">
+            <h2>Team Metrics 📊</h2>
+
+            <div class="metric-card">
+                <h3>Monthly Cost</h3>
+                <p class="metric-value" id="totalCost">$0</p>
+                <p class="metric-sub">vs Traditional: <span id="costSavings">0%</span></p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Output Velocity</h3>
+                <p class="metric-value" id="velocity">1x</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>AI ratio</h3>
+                <div class="progress-bar">
+                    <div class="fill" id="aiRatioBar" style="width: 0%"></div>
+                </div>
+                <p class="metric-sub" id="aiRatioText">0% AI</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 HR Insight</h4>
+                <p id="insightText">Start building your team to see insights.</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Export Modal -->
+    <div id="exportModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Team Architecture Blueprint</h2>
+            <textarea id="exportArea" readonly></textarea>
+            <button id="copyBtn" class="btn primary">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

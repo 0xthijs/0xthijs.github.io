@@ -42,7 +42,7 @@ The site will be available at `http://localhost:1313/hr-ai-portfolio/`.
 │   ├── 02-promotion-velocity/   # Promotion impact study
 │   ├── 03-burnout-risk/         # Burnout risk scoring
 │   ├── 04-diversity-audit/      # Pay equity & representation
-│   └── job-intelligence/        # AI-powered job monitor
+
 ├── themes/                       # Hugo themes (PaperMod)
 ├── hugo.toml                     # Hugo configuration
 ├── AI-WORKFLOW.md                # AI usage documentation

@@ -35,12 +35,6 @@ I sit at the intersection of **People Operations** and **AI Engineering**. While
 
 ---
 
-## What I'm Building Now
-
-🔧 **[Job Intelligence](https://github.com/0xthijs/hr-ai-portfolio/tree/main/data-lab/job-intelligence)** — An AI agent that scrapes job boards, uses Gemini to classify listings by seniority and salary, and generates weekly intelligence reports. It's a proof-of-concept for how LLMs can automate repetitive HR operations.
-
----
-
 ## Connect
 
 - 💼 [LinkedIn](https://linkedin.com/in/thijsvanderaa)

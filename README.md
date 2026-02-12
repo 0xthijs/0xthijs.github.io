@@ -18,7 +18,7 @@ This repository is my working lab — every project solves a real HR problem, an
 | 02 | [Promotion Velocity](data-lab/02-promotion-velocity/) | Does promoting people retain them? | **No.** Recently promoted employees are *more* likely to leave (17% vs 14%) | Proposed "Post-Promotion Re-recruitment" initiative |
 | 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict who will burn out? | High-risk employees leave at **39%** — 4x the baseline | Flagged 64 employees for immediate retention interviews |
 | 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is our pay equitable? | Pay gap < 2% ✅ — but exec representation is only **34% female** | Recommended pipeline review for Level 4 → 5 progression |
-| 05 | [Job Intelligence](data-lab/job-intelligence/) | Can AI automate my job search? | Built an AI agent that scrapes, filters, and ranks job listings using Gemini | Automated weekly job market intelligence reports |
+
 | 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can we start onboarding before day one? | Gamified checklists reduce Day 1 anxiety | Zero-config, browser-based deployment |
 | 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can we automate manual contract drafting? | Real-time validation prevents errors | 100% Client-side privacy & zero backend |
 
@@ -36,7 +36,7 @@ My [Q1 2026 Board Update](content/reports/q1-2026-board-update.md) synthesizes a
 
 I don't just *use* AI — I build *with* AI. Every project in this repo was developed using a structured AI workflow:
 
-- **Gemini 2.0 Flash** → Job analysis & classification ([Job Intelligence](data-lab/job-intelligence/))
+
 - **AI Pair Programming** → Code generation, debugging, and data validation
 - **Prompt Engineering** → Structured prompts with injection guards and JSON schema enforcement
 
