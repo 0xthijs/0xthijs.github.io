@@ -19,8 +19,8 @@ This repository is my working lab — every project solves a real HR problem, an
 | 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict who will burn out? | High-risk employees leave at **39%** — 4x the baseline | Flagged 64 employees for immediate retention interviews |
 | 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is our pay equitable? | Pay gap < 2% ✅ — but exec representation is only **34% female** | Recommended pipeline review for Level 4 → 5 progression |
 | 05 | [Job Intelligence](data-lab/job-intelligence/) | Can AI automate my job search? | Built an AI agent that scrapes, filters, and ranks job listings using Gemini | Automated weekly job market intelligence reports |
-| 06 | [Onboarding PoC](content/projects/onboarding-poc/) | Zero-config interactive checklist app | HTML/JS |
-| 07 | [Contract Generator](content/projects/automated-contract-generator/) | Automated employment contract drafting tool | HTML/JS |
+| 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can we start onboarding before day one? | Gamified checklists reduce Day 1 anxiety | Zero-config, browser-based deployment |
+| 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can we automate manual contract drafting? | Real-time validation prevents errors | 100% Client-side privacy & zero backend |
 
 ---
 
