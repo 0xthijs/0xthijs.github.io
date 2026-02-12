@@ -19,6 +19,7 @@ This repository is my working lab — every project solves a real HR problem, an
 | 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict who will burn out? | High-risk employees leave at **39%** — 4x the baseline | Flagged 64 employees for immediate retention interviews |
 | 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is our pay equitable? | Pay gap < 2% ✅ — but exec representation is only **34% female** | Recommended pipeline review for Level 4 → 5 progression |
 | 05 | [Job Intelligence](data-lab/job-intelligence/) | Can AI automate my job search? | Built an AI agent that scrapes, filters, and ranks job listings using Gemini | Automated weekly job market intelligence reports |
+| 06 | [Onboarding PoC](content/projects/onboarding-poc/) | Can we start onboarding before day one? | Interactive, gamified checklists reduce anxiety and IT support tickets | Zero-config, browser-based tool deployable in seconds |
 
 ---
 
@@ -51,6 +52,7 @@ I don't just *use* AI — I build *with* AI. Every project in this repo was deve
 | **AI Agents** | Google Antigravity · AI Pair Programming |
 | **Automation** | Playwright · Async Python |
 | **Platform** | Hugo · PaperMod · GitHub Pages |
+| **Front-End** | HTML5 · CSS3 · Vanilla JS (Onboarding PoC) |
 | **Data** | SQL · CSV · SQLite |
 
 ---
@@ -69,6 +71,7 @@ I don't just *use* AI — I build *with* AI. Every project in this repo was deve
 
 ## Project Log
 
+- **2026-02-12**: Added Onboarding PoC — a zero-dependency, gamified checklist application running entirely in the browser.
 - **2026-02-11**: Portfolio overhaul — rewrote README as Project Charter, added AI-WORKFLOW.md, documented job-intelligence module.
 - **2026-02-09**: HR Attrition Analysis with data audit and "Data Verified" badge.
 - **2026-02-09**: Implemented `promotion-velocity`, `burnout-risk`, `diversity-audit` modules. Published Q1 Board Update.
