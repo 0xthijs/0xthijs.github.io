@@ -71,6 +71,7 @@ I don't just *use* AI — I build *with* AI. Every project in this repo was deve
 
 ## Project Log
 
+- **2026-02-12**: 🖋️ **Added Project 07 (Contract Generator)**. A web-based tool for automated contract drafting with real-time preview.
 - **2026-02-12**: Added Onboarding PoC — a zero-dependency, gamified checklist application running entirely in the browser.
 - **2026-02-11**: Portfolio overhaul — rewrote README as Project Charter, added AI-WORKFLOW.md, documented job-intelligence module.
 - **2026-02-09**: HR Attrition Analysis with data audit and "Data Verified" badge.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legal Atelier 🖋️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="split-container">
+        <!-- Left Panel: Input Studio -->
+        <aside class="editor-panel">
+            <header>
+                <div class="brand">
+                    <span class="icon">🖋️</span>
+                    <h1>Legal Atelier</h1>
+                </div>
+                <!-- <p>Drafting: Standard Employment Agreement</p> -->
+            </header>
+
+            <form id="contractForm">
+                <!-- Fields injected via JS -->
+            </form>
+
+            <div class="actions">
+                <button id="resetBtn" class="btn secondary">Reset</button>
+                <button id="printBtn" class="btn primary">Print / Save as PDF</button>
+            </div>
+        </aside>
+
+        <!-- Right Panel: Live Preview -->
+        <main class="preview-panel">
+            <div class="paper-container">
+                <div id="contractContent" class="paper">
+                    <!-- Template injected via JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

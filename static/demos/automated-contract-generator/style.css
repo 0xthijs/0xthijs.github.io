@@ -1,0 +1,311 @@
+:root {
+    --bg-editor: #fcfbf9;
+    --bg-preview: #e5e5e5;
+    --paper-color: #ffffff;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --accent-color: #2d3436;
+    --border-color: #dfe6e9;
+    --highlight-color: #fdcb6e;
+    /* Minimal highlight for filled fields */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.split-container {
+    display: flex;
+    height: 100%;
+}
+
+/* Editor Panel */
+.editor-panel {
+    width: 400px;
+    background-color: var(--bg-editor);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.editor-panel header {
+    margin-bottom: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Form Styling */
+#contractForm {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Checkbox Style */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+    background: #fff;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+    flex: 1;
+}
+
+input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.section-header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Actions */
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn.primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+/* Preview Panel */
+.preview-panel {
+    flex: 1;
+    background-color: var(--bg-preview);
+    padding: 3rem;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.paper-container {
+    width: 100%;
+    max-width: 850px;
+    /* A4ish width */
+}
+
+.paper {
+    background-color: var(--paper-color);
+    padding: 3rem 4rem;
+    /* Standard margins */
+    min-height: 1100px;
+    /* A4 height approx */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif;
+    font-size: 11pt;
+    /* Standard contract size */
+    line-height: 1.6;
+    color: #000;
+}
+
+/* Contract Typography */
+.paper h1 {
+    font-size: 16pt;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+}
+
+.paper h3 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.fill {
+    display: inline-block;
+    min-width: 150px;
+    /* Force width */
+    border-bottom: 1px solid #000;
+    /* Solid line */
+    color: #000;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.fill.empty {
+    color: transparent;
+    /* Hide placeholder text if any */
+    /* border-bottom remains visible */
+}
+
+/* Conditional Sections */
+.conditional-section {
+    display: none;
+}
+
+.conditional-section.visible {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.parties {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.party {
+    flex: 1;
+}
+
+.signatures {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    page-break-inside: avoid;
+}
+
+.sig-block {
+    flex: 1;
+}
+
+.line {
+    border-top: 1px solid #000;
+    margin-bottom: 0.5rem;
+}
+
+/* Printing */
+@media print {
+    .editor-panel {
+        display: none;
+    }
+
+    .preview-panel {
+        display: block;
+        padding: 0;
+        background: white;
+    }
+
+    .paper {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    body {
+        height: auto;
+        overflow: visible;
+    }
+
+    .fill {
+        border-bottom: none;
+    }
+
+    @page {
+        margin: 2.5cm;
+    }
+}
