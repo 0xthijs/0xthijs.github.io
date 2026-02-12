@@ -20,7 +20,7 @@ This tool solves the common HR pain point of manual contract drafting. It serves
 
 Draft a sample contract right now:
 
-[👉 **Launch Contract Generator**](/demos/automated-contract-generator/index.html)
+[👉 **Launch Contract Generator**](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)
 
 ---
 

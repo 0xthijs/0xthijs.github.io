@@ -20,7 +20,7 @@ This project is a Proof-of-Concept (PoC) for a lightweight, interactive employee
 
 Experience the application directly in your browser:
 
-[👉 **Launch Onboarding App**](/demos/onboarding-poc/index.html)
+[👉 **Launch Onboarding App**](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)
 
 ---
 
