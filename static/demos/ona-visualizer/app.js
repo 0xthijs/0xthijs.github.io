@@ -333,7 +333,14 @@ function updateSidebar(data) {
 
     // Network Strength (1-10)
     const netStrength = calculateNetworkStrength(data);
-    document.getElementById('p-centrality').textContent = netStrength + " / 10";
+    const netEl = document.getElementById('p-centrality');
+    netEl.textContent = netStrength + " / 10";
+
+    // Color Logic for Network Strength
+    const nScore = parseFloat(netStrength);
+    if (nScore >= 7.5) netEl.style.color = '#00b894'; // Green
+    else if (nScore >= 4.0) netEl.style.color = '#fdcb6e'; // Orange
+    else netEl.style.color = '#d63031'; // Red
 
     // Productivity Score
     // Generate a mock score if not present
