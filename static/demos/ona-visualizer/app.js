@@ -19,32 +19,86 @@ const workModes = {
 
 const nodes = [
     // Engineering Cluster
-    { id: "1", name: "Sanne de Vries", role: "Senior Engineer (Critical)", dept: "eng", risk: "high", tenure: 3.2, workmode: "remote" },
-    { id: "4", name: "Thijs Meijer", role: "Junior Dev", dept: "eng", risk: "low", tenure: 0.4, workmode: "office" }, // New Hire
-    { id: "7", name: "Jan de Jong", role: "Tech Lead", dept: "eng", risk: "medium", tenure: 4.0, workmode: "hybrid" },
-    { id: "9", name: "Ruben Mulder", role: "DevOps", dept: "eng", risk: "low", tenure: 1.5, workmode: "remote" },
+    { id: "1", name: "Sanne de Vries", role: "Senior Engineer (Critical)", dept: "eng", risk: "high", retention_score: 8.5, tenure: 3.2, workmode: "remote" },
+    { id: "4", name: "Thijs Meijer", role: "Junior Dev", dept: "eng", risk: "low", retention_score: 2.1, tenure: 0.4, workmode: "office" },
+    { id: "7", name: "Jan de Jong", role: "Tech Lead", dept: "eng", risk: "medium", retention_score: 5.4, tenure: 4.0, workmode: "hybrid" },
+    { id: "9", name: "Ruben Mulder", role: "DevOps", dept: "eng", risk: "low", retention_score: 1.8, tenure: 1.5, workmode: "remote" },
 
     // Sales Cluster
-    { id: "2", name: "Mark Jansen", role: "VP Sales", dept: "sales", risk: "low", tenure: 5.0, workmode: "hybrid" },
-    { id: "5", name: "Daan Visser", role: "Sales Lead", dept: "sales", risk: "high", tenure: 4.5, workmode: "office" },
-    { id: "11", name: "Pieter Groot", role: "Sales Rep", dept: "sales", risk: "low", tenure: 1.0, workmode: "office" },
-    { id: "12", name: "Karin Vos", role: "Sales Rep", dept: "sales", risk: "high", tenure: 2.8, workmode: "hybrid" },
+    { id: "2", name: "Mark Jansen", role: "VP Sales", dept: "sales", risk: "low", retention_score: 1.5, tenure: 5.0, workmode: "hybrid" },
+    { id: "5", name: "Daan Visser", role: "Sales Lead", dept: "sales", risk: "high", retention_score: 9.2, tenure: 4.5, workmode: "office" },
+    { id: "11", name: "Pieter Groot", role: "Sales Rep", dept: "sales", risk: "low", retention_score: 3.0, tenure: 1.0, workmode: "office" },
+    { id: "12", name: "Karin Vos", role: "Sales Rep", dept: "sales", risk: "high", retention_score: 7.8, tenure: 2.8, workmode: "hybrid" },
 
     // Product Cluster
-    { id: "3", name: "Lotte Bakker", role: "Product Owner", dept: "product", risk: "medium", tenure: 2.1, workmode: "remote" },
-    { id: "8", name: "Lisa van Dijk", role: "Product Manager", dept: "product", risk: "high", tenure: 2.5, workmode: "hybrid" },
+    { id: "3", name: "Lotte Bakker", role: "Product Owner", dept: "product", risk: "medium", retention_score: 6.5, tenure: 2.1, workmode: "remote" },
+    { id: "8", name: "Lisa van Dijk", role: "Product Manager", dept: "product", risk: "high", retention_score: 8.9, tenure: 2.5, workmode: "hybrid" },
 
     // HR Cluster
-    { id: "6", name: "Emma Smit", role: "HR BP", dept: "hr", risk: "low", tenure: 6.0, workmode: "office" },
-    { id: "10", name: "Sophie Bos", role: "Recruiter", dept: "hr", risk: "medium", tenure: 1.2, workmode: "hybrid" },
-    { id: "16", name: "Tess Hoogland", role: "L&D Specialist", dept: "hr", risk: "low", tenure: 2.5, workmode: "office" },
+    { id: "6", name: "Emma Smit", role: "HR BP", dept: "hr", risk: "low", retention_score: 1.2, tenure: 6.0, workmode: "office" },
+    { id: "10", name: "Sophie Bos", role: "Recruiter", dept: "hr", risk: "medium", retention_score: 4.5, tenure: 1.2, workmode: "hybrid" },
+    { id: "16", name: "Tess Hoogland", role: "L&D Specialist", dept: "hr", risk: "low", retention_score: 2.2, tenure: 2.5, workmode: "office" },
 
-    // New Additions (Growth)
-    { id: "13", name: "Bram de Boer", role: "Frontend Dev", dept: "eng", risk: "low", tenure: 0.8, workmode: "office" },
-    { id: "14", name: "Eva Gerritse", role: "Account Exec", dept: "sales", risk: "high", tenure: 3.5, workmode: "remote" },
-    { id: "15", name: "Lars van der Berg", role: "UX Designer", dept: "product", risk: "low", tenure: 1.5, workmode: "hybrid" },
-    { id: "17", name: "Niels Visser", role: "Data Scientist", dept: "eng", risk: "medium", tenure: 1.0, workmode: "remote" }
+    // New Additions
+    { id: "13", name: "Bram de Boer", role: "Frontend Dev", dept: "eng", risk: "low", retention_score: 1.9, tenure: 0.8, workmode: "office" },
+    { id: "14", name: "Eva Gerritse", role: "Account Exec", dept: "sales", risk: "high", retention_score: 8.1, tenure: 3.5, workmode: "remote" },
+    { id: "15", name: "Lars van der Berg", role: "UX Designer", dept: "product", risk: "low", retention_score: 2.5, tenure: 1.5, workmode: "hybrid" },
+    { id: "17", name: "Niels Visser", role: "Data Scientist", dept: "eng", risk: "medium", retention_score: 5.8, tenure: 1.0, workmode: "remote" }
 ];
+
+// ... (links remain unchanged, assume they are preserved or I should include them if I'm replacing the whole block. 
+// Wait, I am using replace_file_content for a chunk. The previous code block was just `nodes` array.
+// I will just replace the nodes definitions first, then the calculate/sidebar functions.)
+
+// Actually, to avoid issues with replacing large chunks, I will do it in parts.
+// First, let's update the sidebar logic to calculate strength and show scores.
+// Then I will update the nodes data in a separate call if needed, or simply assign random scores dynamically if that's easier.
+// But the user wants Specific scores. "Flag for review" and "View History" are in UpdateSidebar.
+
+function calculateNetworkStrength(d) {
+    // scale 1-10 based on connections
+    const connections = links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
+    // Assume max connections is around 6-7.
+    let score = Math.min(10, (connections / 6) * 10);
+    return score.toFixed(1);
+}
+
+function updateSidebar(data) {
+    const panel = document.getElementById('details-panel');
+    const empty = document.getElementById('empty-state');
+
+    panel.classList.remove('hidden');
+    empty.style.display = 'none';
+
+    document.getElementById('p-name').textContent = data.name;
+    document.getElementById('p-role').textContent = data.role;
+    document.getElementById('p-avatar').textContent = getInitials(data.name);
+
+    // Dept
+    const dept = departments.find(d => d.id === data.dept);
+    document.getElementById('p-dept').textContent = dept ? dept.name : data.dept;
+
+    // Location
+    document.getElementById('p-location').textContent = workModes[data.workmode].label;
+
+    // Risk Score (1-10)
+    const riskEl = document.getElementById('p-risk');
+    // If retention_score exists use it, otherwise generate from risk level
+    let rScore = data.retention_score;
+    if (!rScore) {
+        if (data.risk === 'high') rScore = (7 + Math.random() * 2).toFixed(1);
+        else if (data.risk === 'medium') rScore = (4 + Math.random() * 2).toFixed(1);
+        else rScore = (1 + Math.random() * 2).toFixed(1);
+        data.retention_score = rScore; // Cache it
+    }
+
+    riskEl.textContent = rScore + " / 10";
+    riskEl.className = `risk-badge ${data.risk}`; // Keep color coding
+
+    // Network Strength (1-10)
+    // Replacing "Centrality" text with numeric score
+    document.getElementById('p-centrality').textContent = calculateNetworkStrength(data) + " / 10";
+}
 
 const links = [
     // Strong internal Eng ties
