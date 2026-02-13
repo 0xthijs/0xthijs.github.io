@@ -1,41 +1,28 @@
 ---
 title: "About Me"
-date: 2024-02-09
-draft: false
+hidemeta: true
 ---
 
-# Thijs van der Aa
+# HR Strategist. Data Nerd.
 
-**Senior HRBP & AI Product Owner**
+I bridge the gap between "HR wants this" and "Computers can do this."
 
-> Focusing on data-driven workforce strategies and automated decision support tools.
+I am a Senior HR Business Partner who realized that 80% of HR work is repetitive data crunching. So I taught myself to code. Now, I build AI agents and analytics pipelines that automate the boredom away, leaving time for actual improvements.
 
----
+### What I Bring to the Table
 
-## What I Do
+1.  **I speak "Business"**: I know what P&L, attrition cost, and headcount planning actually mean.
+2.  **I speak "Code"**: Python, SQL, and increasingly, AI Agent architectures.
+3.  **I ship**: I don't just make dashboards; I build tools. (See my [Projects](/projects))
 
-My work combines **People Operations** with **AI Engineering**. I develop tools that identify workforce risks proactively, providing data to support retention strategies.
+### My Tech "Stack"
+I don't care about the newest framework. I care about what solves the problem.
 
-**Recent results from my Data Lab:**
-- Identified **64 employees** with elevated burnout risk factors.
-- Analyzed promotion data, finding a higher attrition rate (**17%**) among recently promoted employees compared to peers (14%).
-- Validated **< 2% pay gap** across all job levels in a full diversity audit
+*   **Languages**: Python (Pandas/Playwright), SQL
+*   **AI**: LLM Prompt Engineering, Agentic Workflows (Gemini/OpenAI)
+*   **Web**: Hugo, basic HTML/JS/CSS (enough to be dangerous)
 
----
+### Let's Talk
+If you need someone who can translate business needs into technical requirements—or just build the thing themselves—let's chat.
 
-## Tech Stack
-
-| Category | Tools |
-|:---------|:------|
-| **Analytics** | Python · Pandas · Matplotlib · SQL |
-| **AI / LLM** | Google Gemini 2.0 Flash · Google AI Studio · Structured Prompting |
-| **AI Agents** | Google Antigravity · AI Pair Programming |
-| **Automation** | Playwright · Async Python |
-| **Platform** | Hugo · Git · GitHub Actions |
-
----
-
-## Connect
-
-- 💼 [LinkedIn](https://linkedin.com/in/thijsvanderaa)
-- 🐙 [GitHub](https://github.com/0xthijs)
+[💼 LinkedIn](https://linkedin.com/in/thijsvanderaa) | [🐙 GitHub](https://github.com/0xthijs)
