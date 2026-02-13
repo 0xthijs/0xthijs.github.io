@@ -23,21 +23,21 @@ As HR Business Partners, we often rely on intuition to answer critical questions
 
 This Proof of Concept (PoC) focuses on four specific strategic questions:
 
-1.  **🔍 Influence & Bottlenecks ("The Hidden Leaders")**
+1.  **🔍 Network Strength ("Influence & Bottlenecks")**
     *   *Question:* Who are the people holding the team together?
-    *   *Insight:* Often, your most critical employees aren't managers. They are "Hubs"—informal leaders who bridge gaps. If they leave, the network fractures.
+    *   *Insight:* We calculate a **Network Strength (1-10)** score based on connection volume. This highlights "Hubs"—informal leaders who bridge gaps. If they leave, the network fractures.
 
-2.  **🚨 Flight Risk ("Proactive Retention")**
+2.  **🚨 Retention Risk ("Proactive Retention")**
     *   *Question:* What happens if our high-risk employees leave?
-    *   *Insight:* ONA overlays "Flight Risk" models onto the network. It highlights **Critical Points of Failure**—high-influence nodes that are at risk of turnover.
+    *   *Insight:* The tool calculates a **Retention Risk (1-10)** score combining role criticality and tenure. It highlights **Critical Points of Failure**—high-influence nodes that are at risk of turnover.
 
 3.  **🏠 Work Mode Integration ("Hybrid Culture")**
     *   *Question:* Is "Hybrid" working, or are we creating two separate companies?
-    *   *Insight:* By visualizing Remote vs. Office employees, we can spot "Proximity Bias"—where office workers only talk to office workers, isolating remote talent.
+    *   *Insight:* By visualizing Remote (Purple) vs. In-Office (Green) employees, we can spot "Proximity Bias"—where office workers only talk to office workers, isolating remote talent.
 
-4.  **🌱 Onboarding Speed ("New Hire Integration")**
-    *   *Question:* Are new hires integrating?
-    *   *Insight:* Healthy onboarding looks like movement toward the center. If a 6-month employee is still on the periphery, we need to intervene.
+4.  **⚡ Productivity Dynamics ("Output vs. Network")**
+    *   *Question:* Does being more connected mean being more productive?
+    *   *Insight:* We track a **Productivity Score (1-10)** (simulated from Jira/Git) to correlate output with network position. Are your "Social Butterflies" actually delivering value?
 
 ---
 
