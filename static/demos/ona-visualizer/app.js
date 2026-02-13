@@ -46,59 +46,6 @@ const nodes = [
     { id: "17", name: "Niels Visser", role: "Data Scientist", dept: "eng", risk: "medium", retention_score: 5.8, tenure: 1.0, workmode: "remote" }
 ];
 
-// ... (links remain unchanged, assume they are preserved or I should include them if I'm replacing the whole block. 
-// Wait, I am using replace_file_content for a chunk. The previous code block was just `nodes` array.
-// I will just replace the nodes definitions first, then the calculate/sidebar functions.)
-
-// Actually, to avoid issues with replacing large chunks, I will do it in parts.
-// First, let's update the sidebar logic to calculate strength and show scores.
-// Then I will update the nodes data in a separate call if needed, or simply assign random scores dynamically if that's easier.
-// But the user wants Specific scores. "Flag for review" and "View History" are in UpdateSidebar.
-
-function calculateNetworkStrength(d) {
-    // scale 1-10 based on connections
-    const connections = links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
-    // Assume max connections is around 6-7.
-    let score = Math.min(10, (connections / 6) * 10);
-    return score.toFixed(1);
-}
-
-function updateSidebar(data) {
-    const panel = document.getElementById('details-panel');
-    const empty = document.getElementById('empty-state');
-
-    panel.classList.remove('hidden');
-    empty.style.display = 'none';
-
-    document.getElementById('p-name').textContent = data.name;
-    document.getElementById('p-role').textContent = data.role;
-    document.getElementById('p-avatar').textContent = getInitials(data.name);
-
-    // Dept
-    const dept = departments.find(d => d.id === data.dept);
-    document.getElementById('p-dept').textContent = dept ? dept.name : data.dept;
-
-    // Location
-    document.getElementById('p-location').textContent = workModes[data.workmode].label;
-
-    // Risk Score (1-10)
-    const riskEl = document.getElementById('p-risk');
-    // If retention_score exists use it, otherwise generate from risk level
-    let rScore = data.retention_score;
-    if (!rScore) {
-        if (data.risk === 'high') rScore = (7 + Math.random() * 2).toFixed(1);
-        else if (data.risk === 'medium') rScore = (4 + Math.random() * 2).toFixed(1);
-        else rScore = (1 + Math.random() * 2).toFixed(1);
-        data.retention_score = rScore; // Cache it
-    }
-
-    riskEl.textContent = rScore + " / 10";
-    riskEl.className = `risk-badge ${data.risk}`; // Keep color coding
-
-    // Network Strength (1-10)
-    // Replacing "Centrality" text with numeric score
-    document.getElementById('p-centrality').textContent = calculateNetworkStrength(data) + " / 10";
-}
 
 const links = [
     // Strong internal Eng ties
@@ -345,11 +292,12 @@ function calculateCentralityRaw(d) {
     return links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
 }
 
-function calculateCentrality(d) {
-    const score = calculateCentralityRaw(d);
-    if (score > 4) return "Very High (Hub)";
-    if (score > 2) return "Medium";
-    return "Low (Peripheral)";
+function calculateNetworkStrength(d) {
+    const connections = links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
+    // Normalize: 6 connections = 10/10 strength
+    let score = (connections / 6) * 10;
+    if (score > 10) score = 10;
+    return score.toFixed(1);
 }
 
 function updateSidebar(data) {
@@ -370,12 +318,22 @@ function updateSidebar(data) {
     // Location
     document.getElementById('p-location').textContent = workModes[data.workmode].label;
 
-    // Risk
+    // Risk Score (1-10)
     const riskEl = document.getElementById('p-risk');
-    riskEl.textContent = data.risk.toUpperCase();
+    let rScore = data.retention_score;
+    // Fallback if score is missing from node data
+    if (!rScore) {
+        if (data.risk === 'high') rScore = (7.5 + Math.random() * 2).toFixed(1);
+        else if (data.risk === 'medium') rScore = (4.5 + Math.random() * 2).toFixed(1);
+        else rScore = (1.5 + Math.random() * 2).toFixed(1);
+        data.retention_score = rScore;
+    }
+    riskEl.textContent = rScore + " / 10";
     riskEl.className = `risk-badge ${data.risk}`;
 
-    document.getElementById('p-centrality').textContent = calculateCentrality(data);
+    // Network Strength (1-10)
+    const netStrength = calculateNetworkStrength(data);
+    document.getElementById('p-centrality').textContent = netStrength + " / 10";
 }
 
 function updateLegend(mode) {
