@@ -36,7 +36,14 @@ const nodes = [
 
     // HR Cluster
     { id: "6", name: "Emma Smit", role: "HR BP", dept: "hr", risk: "low", tenure: 6.0, workmode: "office" },
-    { id: "10", name: "Sophie Bos", role: "Recruiter", dept: "hr", risk: "medium", tenure: 1.2, workmode: "hybrid" }
+    { id: "10", name: "Sophie Bos", role: "Recruiter", dept: "hr", risk: "medium", tenure: 1.2, workmode: "hybrid" },
+    { id: "16", name: "Tess Hoogland", role: "L&D Specialist", dept: "hr", risk: "low", tenure: 2.5, workmode: "office" },
+
+    // New Additions (Growth)
+    { id: "13", name: "Bram de Boer", role: "Frontend Dev", dept: "eng", risk: "low", tenure: 0.8, workmode: "office" },
+    { id: "14", name: "Eva Gerritse", role: "Account Exec", dept: "sales", risk: "high", tenure: 3.5, workmode: "remote" },
+    { id: "15", name: "Lars van der Berg", role: "UX Designer", dept: "product", risk: "low", tenure: 1.5, workmode: "hybrid" },
+    { id: "17", name: "Niels Visser", role: "Data Scientist", dept: "eng", risk: "medium", tenure: 1.0, workmode: "remote" }
 ];
 
 const links = [
@@ -45,6 +52,10 @@ const links = [
     { source: "1", target: "4", value: 3 }, // Sanne - Thijs
     { source: "7", target: "9", value: 4 }, // Jan - Ruben
     { source: "1", target: "9", value: 3 }, // Sanne - Ruben
+    { source: "13", target: "4", value: 4 }, // Bram - Thijs (Junior Pair)
+    { source: "13", target: "1", value: 2 }, // Bram - Sanne
+    { source: "17", target: "1", value: 3 }, // Niels - Sanne
+    { source: "17", target: "7", value: 3 }, // Niels - Jan
 
     // Product Bridging Eng and Sales
     { source: "3", target: "1", value: 4 }, // Lotte - Sanne
@@ -52,17 +63,24 @@ const links = [
     { source: "3", target: "8", value: 5 }, // Lotte - Lisa
     { source: "8", target: "2", value: 4 }, // Lisa - Mark
     { source: "3", target: "2", value: 2 }, // Lotte - Mark
+    { source: "15", target: "3", value: 5 }, // Lars - Lotte (UX - PO)
+    { source: "15", target: "8", value: 4 }, // Lars - Lisa
+    { source: "15", target: "13", value: 3 }, // Lars (UX) - Bram (Frontend) -> Cross-dept link!
 
     // Sales Cluster
     { source: "2", target: "5", value: 5 }, // Mark - Daan
     { source: "5", target: "11", value: 3 },
     { source: "5", target: "12", value: 3 },
     { source: "12", target: "2", value: 2 },
+    { source: "14", target: "2", value: 3 }, // Eva - Mark
+    { source: "14", target: "12", value: 4 }, // Eva - Karin
 
     // HR Connections
     { source: "6", target: "2", value: 2 }, // Emma - Mark
     { source: "6", target: "10", value: 5 }, // Internal HR
     { source: "10", target: "4", value: 1 }, // Recruiter - New Hire (Thijs)
+    { source: "16", target: "6", value: 4 }, // Tess - Emma
+    { source: "16", target: "15", value: 2 }, // Tess (L&D) - Lars (UX) -> Training
 ];
 
 // 2. D3 Visualization Setup
