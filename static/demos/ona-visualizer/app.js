@@ -335,9 +335,15 @@ function updateSidebar(data) {
     const netStrength = calculateNetworkStrength(data);
     document.getElementById('p-centrality').textContent = netStrength + " / 10";
 
-    // Boundary Spanning
-    const spanningScore = calculateBoundarySpanning(data);
-    document.getElementById('p-spanning').textContent = spanningScore;
+    // Productivity Score
+    // Generate a mock score if not present
+    if (!data.productivity_score) {
+        // Mock logic: Senior/Critical roles have higher impact but maybe variance
+        const base = 7;
+        const variance = Math.random() * 3;
+        data.productivity_score = (base + variance).toFixed(1);
+    }
+    document.getElementById('p-productivity').textContent = data.productivity_score + " / 10";
 }
 
 function calculateBoundarySpanning(d) {
