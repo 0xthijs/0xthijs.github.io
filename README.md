@@ -23,7 +23,7 @@ This repository serves as a portfolio of practical solutions — each project ad
 | 05 | [Job Market Intelligence](data-lab/job-intelligence/) | What skills are actually in demand? | AI Agents scrape & analyze job data for real-time market insights | Automated "Voice of the Market" strategy reports |
 | 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
 | 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
-| 08 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/ona-visualizer/index.html)) | How does information actually flow? | Visualized "Hidden Organization" & Silos | Identified Key Influencers & Burnout Risks |
+| 08 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/hr-ai-portfolio/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
 
 ---
 
@@ -74,7 +74,7 @@ I integrate AI tools throughout the development process. This repository demonst
 
 ## Project Log
 
-- **2026-02-13**: 🕸️ **Added Project 08 (Network Visualizer)**. Interactive ONA tool with D3.js to map organizational relationships.
+- **2026-02-13**: 🕸️ **Added Project 08 (Network Visualizer)**. A strategic ONA tool to diagnose organizational health (Silos, Burnout, Inclusion) using interactive network graphs.
 - **2026-02-12**: 🖋️ **Added Project 07 (Contract Generator)**. A web-based tool for automated contract drafting with real-time preview.
 - **2026-02-12**: Added Onboarding PoC — a zero-dependency, gamified checklist application running entirely in the browser.
 - **2026-02-11**: Portfolio overhaul — rewrote README as Project Charter, added AI-WORKFLOW.md, documented job-intelligence module.
