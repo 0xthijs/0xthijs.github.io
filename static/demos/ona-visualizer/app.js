@@ -334,6 +334,23 @@ function updateSidebar(data) {
     // Network Strength (1-10)
     const netStrength = calculateNetworkStrength(data);
     document.getElementById('p-centrality').textContent = netStrength + " / 10";
+
+    // Boundary Spanning
+    const spanningScore = calculateBoundarySpanning(data);
+    document.getElementById('p-spanning').textContent = spanningScore;
+}
+
+function calculateBoundarySpanning(d) {
+    const myLinks = links.filter(l => l.source.id === d.id || l.target.id === d.id);
+    if (myLinks.length === 0) return "0%";
+
+    const crossDeptLinks = myLinks.filter(l => {
+        const neighbor = l.source.id === d.id ? l.target : l.source;
+        return neighbor.dept !== d.dept;
+    });
+
+    const percentage = Math.round((crossDeptLinks.length / myLinks.length) * 100);
+    return percentage + "%";
 }
 
 function updateLegend(mode) {

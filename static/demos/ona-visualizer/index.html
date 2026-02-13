@@ -63,12 +63,18 @@
                         <strong id="p-tenure">3.2 Years</strong>
                     </div>
                     <div class="metric">
-                        <label>Network Strength</label>
+                        <label data-tooltip="Influence based on number of connections">Network Strength</label>
                         <strong id="p-centrality">-</strong>
                     </div>
                     <div class="metric">
-                        <label>Retention Risk</label>
+                        <label data-tooltip="Risk score based on role criticality & tenure">Retention Risk</label>
                         <strong id="p-risk" class="risk-badge high">-</strong>
+                    </div>
+                    <div class="metric"
+                        style="grid-column: span 2; margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">
+                        <label data-tooltip="% of connections outside their own department">Boundary Spanning (Silo
+                            Busting)</label>
+                        <strong id="p-spanning" style="color: #6c5ce7;">-</strong>
                     </div>
                 </div>
 
@@ -89,7 +95,7 @@
         </main>
     </div>
 
-    <script src="app.js?v=nl6"></script>
+    <script src="app.js?v=nl7"></script>
 </body>
 
 </html>
