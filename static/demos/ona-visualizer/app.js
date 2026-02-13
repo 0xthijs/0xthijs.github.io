@@ -343,7 +343,15 @@ function updateSidebar(data) {
         const variance = Math.random() * 3;
         data.productivity_score = (base + variance).toFixed(1);
     }
-    document.getElementById('p-productivity').textContent = data.productivity_score + " / 10";
+
+    const prodEl = document.getElementById('p-productivity');
+    prodEl.textContent = data.productivity_score + " / 10";
+
+    // Color Logic for Productivity
+    const pScore = parseFloat(data.productivity_score);
+    if (pScore >= 7.5) prodEl.style.color = '#00b894'; // Green
+    else if (pScore >= 5.5) prodEl.style.color = '#fdcb6e'; // Orange
+    else prodEl.style.color = '#d63031'; // Red
 }
 
 function calculateBoundarySpanning(d) {
