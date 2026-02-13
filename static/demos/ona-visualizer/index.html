@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Network Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Controls -->
+        <aside class="sidebar">
+            <header>
+                <div class="brand">
+                    <span class="icon">🕸️</span>
+                    <h1>Network Visualizer</h1>
+                </div>
+                <p class="subtitle">Organizational Health & Communication</p>
+            </header>
+
+            <div class="control-panel">
+                <div class="control-group">
+                    <label>View Mode</label>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-mode="dept">Department</button>
+                        <button class="toggle-btn" data-mode="risk">Burnout Risk</button>
+                        <button class="toggle-btn" data-mode="tenure">Tenure</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Search Employee</label>
+                    <input type="text" id="search" placeholder="Type a name...">
+                </div>
+            </div>
+
+            <!-- Selected Node Details -->
+            <div id="details-panel" class="details-panel hidden">
+                <div class="profile-header">
+                    <div class="avatar" id="p-avatar">SJ</div>
+                    <div>
+                        <h2 id="p-name">Sarah Jenkins</h2>
+                        <span id="p-role" class="badge">Senior Engineer</span>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <label>Department</label>
+                        <strong id="p-dept">Engineering</strong>
+                    </div>
+                    <div class="metric">
+                        <label>Tenure</label>
+                        <strong id="p-tenure">3.2 Years</strong>
+                    </div>
+                    <div class="metric">
+                        <label>Centrality</label>
+                        <strong id="p-centrality">High</strong>
+                    </div>
+                    <div class="metric">
+                        <label>Risk Level</label>
+                        <strong id="p-risk" class="risk-badge high">High</strong>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn secondary">View History</button>
+                    <button class="btn primary">Flag for Review</button>
+                </div>
+            </div>
+
+            <div id="empty-state" class="empty-state">
+                <p>Select a node to view employee details and risk metrics.</p>
+            </div>
+        </aside>
+
+        <!-- Main Visualization Area -->
+        <main class="viz-container">
+            <div id="graph"></div>
+            <div class="legend" id="legend">
+                <!-- Legend injected by JS -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
