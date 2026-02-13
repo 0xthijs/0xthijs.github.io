@@ -8,7 +8,7 @@ weight: 1
 
 ## 🚀 Experience the "Invisible Organization"
 
-[👉 **Launch the Interactive Visualizer**](https://0xthijs.github.io/hr-ai-portfolio/demos/ona-visualizer/index.html)
+[👉 **Launch the Interactive Visualizer**](https://0xthijs.github.io/demos/ona-visualizer/index.html)
 
 ---
 
