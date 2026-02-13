@@ -1,0 +1,89 @@
+/* Custom CSS for 0xthijs.github.io */
+
+/* 1. Typography - Modern & Clean */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --font-family: 'Outfit', sans-serif;
+    --accent: #6c5ce7;
+    /* Matches ONA Visualizer vibe */
+    --accent-hover: #a29bfe;
+}
+
+body {
+    font-family: var(--font-family) !important;
+}
+
+/* 2. Hero Section - Make it Pop */
+.profile .profile_inner h1 {
+    font-size: 3.5rem !important;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #b2bec3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .profile_inner .subtitle {
+    font-size: 1.5rem !important;
+    color: #dfe6e9 !important;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Buttons - Tactile & High End */
+.button {
+    background: var(--accent);
+    color: white;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* 3. Project Cards - Not just a list */
+.post-entry {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.entry-header h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.entry-content {
+    color: #b2bec3;
+    font-size: 1.1rem;
+}
+
+/* 4. Navigation */
+.header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item a {
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.menu-item a:hover {
+    color: var(--accent);
+}
