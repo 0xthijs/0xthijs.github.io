@@ -315,8 +315,8 @@ function updateSidebar(data) {
     const dept = departments.find(d => d.id === data.dept);
     document.getElementById('p-dept').textContent = dept ? dept.name : data.dept;
 
-    // Location
-    document.getElementById('p-location').textContent = workModes[data.workmode].label;
+    // Tenure (Matched to ID p-tenure, replaced p-location)
+    document.getElementById('p-tenure').textContent = data.tenure + " Years";
 
     // Risk Score (1-10)
     const riskEl = document.getElementById('p-risk');
