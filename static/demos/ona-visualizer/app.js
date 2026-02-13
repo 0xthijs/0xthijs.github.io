@@ -2,6 +2,7 @@
 
 // 1. Mock Data Generator
 // HRBP Strategy: We need data that tells a story about silos, risk, and hybrid work.
+// Updated: Localized for Netherlands context.
 
 const departments = [
     { id: 'eng', name: 'Engineering', color: '#74b9ff' },
@@ -17,51 +18,51 @@ const workModes = {
 };
 
 const nodes = [
-    // Engineering Cluster - The "Engine Room"
-    { id: "1", name: "Sarah Jenkins", role: "Senior Engineer (Critical)", dept: "eng", risk: "high", tenure: 3.2, workmode: "remote" },
-    { id: "4", name: "Tom Baker", role: "Junior Dev", dept: "eng", risk: "low", tenure: 0.4, workmode: "office" }, // New Hire
-    { id: "7", name: "James Wilson", role: "Tech Lead", dept: "eng", risk: "medium", tenure: 4.0, workmode: "hybrid" },
-    { id: "9", name: "Robert Taylor", role: "DevOps", dept: "eng", risk: "low", tenure: 1.5, workmode: "remote" },
+    // Engineering Cluster
+    { id: "1", name: "Sanne de Vries", role: "Senior Engineer (Critical)", dept: "eng", risk: "high", tenure: 3.2, workmode: "remote" },
+    { id: "4", name: "Thijs Meijer", role: "Junior Dev", dept: "eng", risk: "low", tenure: 0.4, workmode: "office" }, // New Hire
+    { id: "7", name: "Jan de Jong", role: "Tech Lead", dept: "eng", risk: "medium", tenure: 4.0, workmode: "hybrid" },
+    { id: "9", name: "Ruben Mulder", role: "DevOps", dept: "eng", risk: "low", tenure: 1.5, workmode: "remote" },
 
-    // Sales Cluster - The "Revenue Drivers"
-    { id: "2", name: "Mike Chen", role: "VP Sales", dept: "sales", risk: "low", tenure: 5.0, workmode: "hybrid" },
-    { id: "5", name: "David Miller", role: "Sales Lead", dept: "sales", risk: "high", tenure: 4.5, workmode: "office" },
-    { id: "11", name: "Paul Thomas", role: "Sales Rep", dept: "sales", risk: "low", tenure: 1.0, workmode: "office" },
-    { id: "12", name: "Karen Brown", role: "Sales Rep", dept: "sales", risk: "high", tenure: 2.8, workmode: "hybrid" },
+    // Sales Cluster
+    { id: "2", name: "Mark Jansen", role: "VP Sales", dept: "sales", risk: "low", tenure: 5.0, workmode: "hybrid" },
+    { id: "5", name: "Daan Visser", role: "Sales Lead", dept: "sales", risk: "high", tenure: 4.5, workmode: "office" },
+    { id: "11", name: "Pieter Groot", role: "Sales Rep", dept: "sales", risk: "low", tenure: 1.0, workmode: "office" },
+    { id: "12", name: "Karin Vos", role: "Sales Rep", dept: "sales", risk: "high", tenure: 2.8, workmode: "hybrid" },
 
-    // Product Cluster - The "Bridge"
-    { id: "3", name: "Jessica Wu", role: "Product Owner", dept: "product", risk: "medium", tenure: 2.1, workmode: "remote" },
-    { id: "8", name: "Linda Martinez", role: "Product Manager", dept: "product", risk: "high", tenure: 2.5, workmode: "hybrid" },
+    // Product Cluster
+    { id: "3", name: "Lotte Bakker", role: "Product Owner", dept: "product", risk: "medium", tenure: 2.1, workmode: "remote" },
+    { id: "8", name: "Lisa van Dijk", role: "Product Manager", dept: "product", risk: "high", tenure: 2.5, workmode: "hybrid" },
 
-    // HR Cluster - The "Support"
-    { id: "6", name: "Emily Davis", role: "HR BP", dept: "hr", risk: "low", tenure: 6.0, workmode: "office" },
-    { id: "10", name: "Susan White", role: "Recruiter", dept: "hr", risk: "medium", tenure: 1.2, workmode: "hybrid" }
+    // HR Cluster
+    { id: "6", name: "Emma Smit", role: "HR BP", dept: "hr", risk: "low", tenure: 6.0, workmode: "office" },
+    { id: "10", name: "Sophie Bos", role: "Recruiter", dept: "hr", risk: "medium", tenure: 1.2, workmode: "hybrid" }
 ];
 
 const links = [
     // Strong internal Eng ties
-    { source: "1", target: "7", value: 5 }, // Sarah - James
-    { source: "1", target: "4", value: 3 }, // Sarah - Tom
-    { source: "7", target: "9", value: 4 }, // James - Robert
-    { source: "1", target: "9", value: 3 }, // Sarah - Robert
+    { source: "1", target: "7", value: 5 }, // Sanne - Jan
+    { source: "1", target: "4", value: 3 }, // Sanne - Thijs
+    { source: "7", target: "9", value: 4 }, // Jan - Ruben
+    { source: "1", target: "9", value: 3 }, // Sanne - Ruben
 
     // Product Bridging Eng and Sales
-    { source: "3", target: "1", value: 4 }, // Jessica (Prod) - Sarah (Eng)
-    { source: "3", target: "7", value: 3 }, // Jessica (Prod) - James (Eng)
-    { source: "3", target: "8", value: 5 }, // Jessica (Prod) - Linda (Prod)
-    { source: "8", target: "2", value: 4 }, // Linda (Prod) - Mike (VP Sales)
-    { source: "3", target: "2", value: 2 }, // Jessica (Prod) - Mike (VP Sales)
+    { source: "3", target: "1", value: 4 }, // Lotte - Sanne
+    { source: "3", target: "7", value: 3 }, // Lotte - Jan
+    { source: "3", target: "8", value: 5 }, // Lotte - Lisa
+    { source: "8", target: "2", value: 4 }, // Lisa - Mark
+    { source: "3", target: "2", value: 2 }, // Lotte - Mark
 
     // Sales Cluster
-    { source: "2", target: "5", value: 5 }, // Mike - David
+    { source: "2", target: "5", value: 5 }, // Mark - Daan
     { source: "5", target: "11", value: 3 },
     { source: "5", target: "12", value: 3 },
     { source: "12", target: "2", value: 2 },
 
-    // HR Connections (Sparse but specific)
-    { source: "6", target: "2", value: 2 }, // Emily (HR) - Mike (VP Sales)
+    // HR Connections
+    { source: "6", target: "2", value: 2 }, // Emma - Mark
     { source: "6", target: "10", value: 5 }, // Internal HR
-    { source: "10", target: "4", value: 1 }, // Recruiter - New Hire (Tom) - Weak link!
+    { source: "10", target: "4", value: 1 }, // Recruiter - New Hire (Thijs)
 ];
 
 // 2. D3 Visualization Setup
@@ -163,12 +164,26 @@ function dragended(event, d) {
 
 // Click Handling
 node.on("click", (event, d) => {
-    node.attr("stroke-width", 3); // Reset
-    d3.select(event.currentTarget).attr("stroke-width", 5); // Highlight
-    updateSidebar(d);
+    selectNode(d, event.currentTarget);
 });
 
-// 4. View Modes & Filters (The Strategic Lens)
+function selectNode(d, element) {
+    // Reset all styling
+    node.attr("stroke-width", 3);
+
+    // Highlight selected
+    if (element) {
+        d3.select(element).attr("stroke-width", 5);
+    } else {
+        // Find node element by ID if not clicked directly
+        node.filter(n => n.id === d.id).attr("stroke-width", 5);
+    }
+
+    updateSidebar(d);
+}
+
+
+// 4. View Modes & Filters
 
 const toggles = document.querySelectorAll('.toggle-btn');
 toggles.forEach(btn => {
@@ -181,32 +196,53 @@ toggles.forEach(btn => {
 });
 
 function updateViewMode(mode) {
-    // Transition styles based on mode
     node.transition().duration(500)
         .attr("fill", d => {
-            // Fill is usually white, but in specialized modes we might want full color blobs?
-            // Let's keep fill white and use stroke for cleaner look, OR use fill for emphasis.
-            // Decision: Use Stroke for data, Fill White for cleanliness, UNLESS 'Influence' mode.
             if (mode === 'influence') return calculateCentralityRaw(d) > 3 ? '#ffeaa7' : 'white';
             return 'white';
         })
         .attr("r", d => {
-            if (mode === 'influence') return 20 + (calculateCentralityRaw(d) * 3); // Size by influence
-            return 20; // Standard size
+            if (mode === 'influence') return 20 + (calculateCentralityRaw(d) * 3);
+            return 20;
         })
         .attr("stroke", d => {
             if (mode === 'dept') return getDeptColor(d.dept);
             if (mode === 'risk') return getRiskColor(d.risk);
             if (mode === 'workmode') return getWorkModeColor(d.workmode);
             if (mode === 'tenure') return getTenureColor(d.tenure);
-            if (mode === 'influence') return '#b2bec3'; // Grey stroke when sizing matters more
+            if (mode === 'influence') return '#b2bec3';
             return '#b2bec3';
         });
 
     updateLegend(mode);
 }
 
-// 5. Helpers & Color Scales
+// 5. Search Features
+const searchInput = document.getElementById('search');
+const datalist = document.getElementById('employee-list');
+
+// Populate datalist
+nodes.forEach(n => {
+    const option = document.createElement('option');
+    option.value = n.name;
+    datalist.appendChild(option);
+});
+
+// Search Event Listener
+searchInput.addEventListener('input', (e) => {
+    const val = e.target.value;
+    const found = nodes.find(n => n.name.toLowerCase() === val.toLowerCase());
+
+    if (found) {
+        selectNode(found);
+
+        // Optional: Center camera on node (simple implementation)
+        // simulation.alpha(1).restart(); // Shake to show?
+    }
+});
+
+
+// 6. Helpers & Color Scales
 
 function getDeptColor(deptId) {
     const dept = departments.find(d => d.id === deptId);
@@ -224,7 +260,7 @@ function getWorkModeColor(mode) {
 }
 
 function getTenureColor(years) {
-    if (years < 0.5) return '#d63031'; // RED alert for New Hires (need attention)
+    if (years < 0.5) return '#d63031'; // RED alert for New Hires
     if (years < 2) return '#74b9ff';
     return '#6c5ce7'; // Senior
 }
@@ -234,7 +270,6 @@ function getInitials(name) {
 }
 
 function calculateCentralityRaw(d) {
-    // Simple degree centrality
     return links.filter(l => l.source.id === d.id || l.target.id === d.id).length;
 }
 
@@ -315,9 +350,7 @@ function updateLegend(mode) {
     items.forEach(item => {
         const div = document.createElement('div');
         div.className = 'legend-item';
-        // Handle special case for influence where color might be fill or stroke
         const bgStyle = mode === 'influence' && item.color === '#ffffff' ? 'border: 1px solid #ccc; background: white;' : `background: ${item.color}`;
-
         div.innerHTML = `<div class="legend-dot" style="${bgStyle}"></div><span>${item.label}</span>`;
         legend.appendChild(div);
     });
