@@ -1,5 +1,7 @@
 {{- define "main" }}
 
+{{- partial "cover.html" (dict "cxt" . "IsSingle" true) }}
+
 <header class="page-header">
   <h1>
     {{ .Title }}
