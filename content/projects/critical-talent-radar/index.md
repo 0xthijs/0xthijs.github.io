@@ -1,5 +1,5 @@
 ---
-title: "Critical Talent Risk Radar"
+title: "🛡️ Critical Talent Risk Radar"
 date: 2026-02-14
 draft: false
 description: "AI-driven retention strategy tool for HR, analyzing flight risk among high-performers."
