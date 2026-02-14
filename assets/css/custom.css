@@ -64,6 +64,20 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* Separator Line */
+.post-entry::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 24px auto 0;
+}
+
+.post-entry:last-child::after {
+    display: none;
+}
+
 .entry-header h2 {
     font-size: 1.8rem;
     color: var(--accent);

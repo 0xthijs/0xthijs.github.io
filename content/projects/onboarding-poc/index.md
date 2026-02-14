@@ -1,5 +1,5 @@
 ---
-title: "Interactive Onboarding Checklist"
+title: "👋 Interactive Onboarding Checklist"
 date: 2026-02-12
 summary: "A zero-dependency, browser-based onboarding application proof-of-concept. Features local persistence, gamification, and a responsive design."
 tags: ["HTML", "CSS", "JavaScript", "PoC"]

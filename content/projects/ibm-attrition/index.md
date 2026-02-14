@@ -1,5 +1,5 @@
 ---
-title: "Data-Driven HR: Why Your High Performers Are Leaving"
+title: "🏃 Data-Driven HR: Why Your High Performers Are Leaving"
 date: 2026-02-09T14:30:00+07:00
 draft: false
 tags: ["HR Analytics", "Python", "Attrition", "Data Science"]

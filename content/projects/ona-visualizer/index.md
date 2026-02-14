@@ -1,5 +1,5 @@
 ---
-title: "Organizational Network Visualizer"
+title: "🕸️ Organizational Network Visualizer"
 date: 2026-02-13
 summary: "Mapping the 'Invisible Organization'. A strategic tool to visualize communication flow, identify hidden influencers, and prevent burnout before it happens."
 tags: ["HR Analytics", "D3.js", "Network Analysis", "AI Engineering"]

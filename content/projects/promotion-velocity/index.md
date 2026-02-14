@@ -1,5 +1,5 @@
 ---
-title: "The Promotion Curse: Why Recently Promoted High Performers Leave"
+title: "🚀 The Promotion Curse: Why Recently Promoted High Performers Leave"
 date: 2026-02-09T14:45:00+07:00
 draft: false
 tags: ["Talent Management", "Python", "Retention Strategy"]
