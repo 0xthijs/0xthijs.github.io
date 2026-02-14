@@ -10,16 +10,14 @@ theme = 'PaperMod'
     ShowPostNavLinks = true
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
-    description = "HR Strategist who codes."
+    description = "HR Strategist. Building AI tools to solve workforce problems."
     
     [params.profileMode]
         enabled = true
         title = "Thijs van der Aa"
-        subtitle = "HR Strategist who codes. Building AI tools to solve people problems."
-        imageUrl = "https://github.com/0xthijs.png"
+        subtitle = "HR Strategist. Building AI tools to solve workforce problems."
+        imageUrl = "images/home-banner.png"
         imageTitle = "Thijs"
-        imageWidth = 120
-        imageHeight = 120
         buttons = [
             { name = "Projects", url = "projects" },
             { name = "About Me", url = "about" },
