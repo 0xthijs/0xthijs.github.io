@@ -3,6 +3,8 @@ title: "About Me"
 hidemeta: true
 ---
 
+![Strategic HR AI Banner](/images/home-banner.png)
+
 # HR Strategist. Data Nerd.
 
 I bridge the gap between "HR wants this" and "Computers can do this."
