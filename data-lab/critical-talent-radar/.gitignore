@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Streamlit
+.streamlit/secrets.toml
+# Keep example secrets
+!.streamlit/secrets.toml.example
+.streamlit/config.toml
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project
+IBM_HR_Employee_Attrition.csv
