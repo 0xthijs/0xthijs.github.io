@@ -19,4 +19,12 @@ My approach is not about AI taking over; it is about using technology to improve
 I operate as a Strategic HR Tech Partner.
 I understand the "People" side of the business, but I also master the "AI" tools required to build modern solutions. I bridge the gap between strategy and execution, using AI to prototype tools that make work more human, not less.
 
+### How I Build
+**Strategy over Syntax.**
+I do not write code from scratch; I architect solutions. I utilize AI agents to handle the technical execution (Python, SQL), allowing me to focus entirely on business logic, data validity, and rapid deployment.
+
+*   **Orchestration**: Google Studio AI, Google Antigravity, Gemini Pro & Agentic Workflows.
+*   **Execution**: Python & SQL (AI-Generated & Audited).
+*   **Visualization**: Web Applications, Interactive Dashboards, Power BI, Excel
+
 [LinkedIn](https://linkedin.com/in/thijsvanderaa) | [GitHub](https://github.com/0xthijs)
