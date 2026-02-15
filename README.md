@@ -20,11 +20,12 @@ This repository serves as a portfolio of practical solutions — each project ad
 | 02 | [Promotion Velocity](data-lab/02-promotion-velocity/) | Does promotion impact retention? | **No.** Recently promoted employees are *more* likely to leave (17% vs 14%) | Proposed "Post-Promotion Engagement" initiative |
 | 03 | [Burnout Risk Index](data-lab/03-burnout-risk/) | Can we predict burnout risk? | High-risk employees leave at **39%** — 4x the baseline | Identified 64 employees for proactive retention discussions |
 | 04 | [Diversity & Equity Audit](data-lab/04-diversity-audit/) | Is pay equitable? | Pay gap < 2% ✅ — executive representation is **34% female** | Recommended pipeline review for Level 4 → 5 progression |
-| 05 | [Job Market Intelligence](data-lab/job-intelligence/) | What skills are actually in demand? | AI Agents scrape & analyze job data for real-time market insights | Automated "Voice of the Market" strategy reports |
-| 06 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
-| 07 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
-| 08 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
-| 09 | [The 1:1 Architect](content/projects/one-on-one-architect/) ([⚡ Run Locally](content/projects/one-on-one-architect/)) | Can manager meetings be structured? | AI reframes complaints into data-driven strategy | Runs locally for complete privacy |
+| 05 | [Data Governance](content/projects/data-governance/) | Is our data trustworthy? | **95% Health Score** — 5% critical errors detected | Automated "Governance Engine" firewall |
+| 06 | [Job Market Intelligence](data-lab/job-intelligence/) | What skills are actually in demand? | AI Agents scrape & analyze job data for real-time market insights | Automated "Voice of the Market" strategy reports |
+| 07 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
+| 08 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
+| 09 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
+| 10 | [The 1:1 Architect](content/projects/one-on-one-architect/) ([⚡ Run Locally](content/projects/one-on-one-architect/)) | Can manager meetings be structured? | AI reframes complaints into data-driven strategy | Runs locally for complete privacy |
 
 ---
 
@@ -75,7 +76,8 @@ I integrate AI tools throughout the development process. This repository demonst
 
 ## Project Log
 
-- **2026-02-15**: 🗣️ **Added Project 09 (The 1:1 Architect)**. A Streamlit app to structure manager meetings, running locally for privacy.
+- **2026-02-15**: 🛡️ **Added Project 05 (Data Governance)**. An automated pipeline for HR data stress-testing and auditing.
+- **2026-02-15**: 🗣️ **Added Project 10 (The 1:1 Architect)**. A Streamlit app to structure manager meetings, running locally for privacy.
 - **2026-02-13**: 🕸️ **Added Project 08 (Network Visualizer)**. A strategic ONA tool to diagnose organizational health (Silos, Inclusion, Productivity) using interactive network graphs.
 - **2026-02-12**: 🖋️ **Added Project 07 (Contract Generator)**. A web-based tool for automated contract drafting with real-time preview.
 - **2026-02-12**: Added Onboarding PoC — a zero-dependency, gamified checklist application running entirely in the browser.

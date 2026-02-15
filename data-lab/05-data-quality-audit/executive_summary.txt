@@ -1,0 +1,20 @@
+EXECUTIVE DATA QUALITY REPORT
+=============================
+Date: 2026-02-15
+
+SUMMARY METRICS
+---------------
+Total Records Processed: 1470
+Clean Records:           1400
+Corrupt Records:         70
+Data Health Score:       95.24%
+
+ERROR BREAKDOWN
+---------------
+- Invalid Department: 24 records
+- Tenure Logic Fail (YearsAtCompany > TotalWorkingYears): 24 records
+- Invalid Age (Must be 18-80): 24 records
+
+RECOMMENDATION
+--------------
+Assessment: Urgent Cleanup Needed
