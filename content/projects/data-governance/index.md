@@ -3,7 +3,7 @@ title: "🧹 Automated HR Data Governance Pipeline"
 date: 2026-02-15
 summary: "An automated 'Governance Engine' acting as a firewall for HR data, ensuring 100% data integrity for People Analytics."
 tags: ["Python", "Pandas", "Data Engineering", "Audit"]
-weight: 0
+weight: -100
 cover:
   image: "/images/automated-hr-data-governance-pipeline.png"
   alt: "Automated HR Data Governance Pipeline Interface"
