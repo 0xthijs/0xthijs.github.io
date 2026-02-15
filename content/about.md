@@ -5,26 +5,17 @@ hidemeta: true
 
 ![Strategic HR AI Banner](/images/home-banner.png)
 
-# HR Strategist. Data Nerd.
+# Evolving HR for the Era of AI Agents.
 
-I bridge the gap between "HR wants this" and "Computers can do this."
+### The Context
+Workforce developments show a clear trajectory: the systems managing people are becoming as complex as the people themselves. Traditional administrative methods are no longer sufficient to support a modern, distributed organization that is evolving rapidly. As AI agents become a fundamental part of operations, the very definition of "labor" is changing. HR must evolve with it.
 
-I am a Senior HR Business Partner who realized that 80% of HR work is repetitive data crunching. So I taught myself to code. Now, I build AI agents and analytics pipelines that automate the boredom away, leaving time for actual improvements.
+### The Perspective
+We are moving away from viewing employees as static resources and toward viewing the organization as a dynamic ecosystem.
+My approach is not about AI taking over; it is about using technology to improve the workforce. This evolution offers the potential to significantly boost productivity and return ownership of work to the people doing it.
 
-### What I Bring to the Table
-
-1.  **I speak "Business"**: I know what P&L, attrition cost, and headcount planning actually mean.
-2.  **I speak "Code"**: Python, SQL, and increasingly, AI Agent architectures.
-3.  **I ship**: I don't just make dashboards; I build tools. (See my [Projects](/projects))
-
-### My Tech "Stack"
-I don't care about the newest framework. I care about what solves the problem.
-
-*   **Languages**: Python (Pandas/Playwright), SQL
-*   **AI**: LLM Prompt Engineering, Agentic Workflows (Gemini/OpenAI)
-*   **Web**: Hugo, basic HTML/JS/CSS (enough to be dangerous)
-
-### Let's Talk
-If you need someone who can translate business needs into technical requirements—or just build the thing themselves—let's chat.
+### My Role
+I operate as a Strategic HR Tech Partner.
+I understand the "People" side of the business, but I also master the "AI" tools required to build modern solutions. I bridge the gap between strategy and execution, using AI to prototype tools that make work more human, not less.
 
 [💼 LinkedIn](https://linkedin.com/in/thijsvanderaa) | [🐙 GitHub](https://github.com/0xthijs)
