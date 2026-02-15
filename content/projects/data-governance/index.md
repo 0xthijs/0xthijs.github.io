@@ -13,6 +13,8 @@ weight: 5
 >
 > **The Solution:** I built an automated "Governance Engine" that acts as a firewall for HR data. It creates a trusted data layer for People Analytics.
 
+![Graph Data Generator Demo](/images/graph_data_generator.png)
+
 ### 🏗️ Architecture: The "Chaos & Order" Approach
 I didn't just write a cleaning script. I implemented **Test-Driven Development** by building a "Chaos Monkey" that intentionally corrupts data to prove the Audit Engine works.
 
