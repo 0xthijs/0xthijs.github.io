@@ -1,5 +1,5 @@
 ---
-title: "The 1:1 Architect"
+title: "🗣️ The 1:1 Architect"
 date: 2026-02-15
 summary: "A Streamlit app to help employees prepare for their bi-weekly manager meeting with impact."
 tags: ["Streamlit", "Python", "AI", "Tool"]
