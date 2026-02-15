@@ -4,6 +4,10 @@ date: 2026-02-15
 summary: "An automated 'Governance Engine' acting as a firewall for HR data, ensuring 100% data integrity for People Analytics."
 tags: ["Python", "Pandas", "Data Engineering", "Audit"]
 weight: 5
+cover:
+  image: "/images/Automated%20HR%20Data%20Governance%20Pipeline.png"
+  alt: "Automated HR Data Governance Pipeline Interface"
+  relative: false
 ---
 
 ## 🛠️ Project: Automated HR Data Governance Pipeline
@@ -13,7 +17,7 @@ weight: 5
 >
 > **The Solution:** I built an automated "Governance Engine" that acts as a firewall for HR data. It creates a trusted data layer for People Analytics.
 
-![Graph Data Generator Demo](/images/graph_data_generator.png)
+![Automated HR Data Governance Pipeline Interface](/images/Automated%20HR%20Data%20Governance%20Pipeline.png)
 
 ### 🏗️ Architecture: The "Chaos & Order" Approach
 I didn't just write a cleaning script. I implemented **Test-Driven Development** by building a "Chaos Monkey" that intentionally corrupts data to prove the Audit Engine works.
