@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-# layout: "archives"
 url: "/projects/"
 summary: "tools and analytics"
 cover:
