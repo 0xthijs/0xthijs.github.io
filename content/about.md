@@ -18,4 +18,4 @@ My approach is not about AI taking over; it is about using technology to improve
 I operate as a Strategic HR Tech Partner.
 I understand the "People" side of the business, but I also master the "AI" tools required to build modern solutions. I bridge the gap between strategy and execution, using AI to prototype tools that make work more human, not less.
 
-[💼 LinkedIn](https://linkedin.com/in/thijsvanderaa) | [🐙 GitHub](https://github.com/0xthijs)
+[LinkedIn](https://linkedin.com/in/thijsvanderaa) | [GitHub](https://github.com/0xthijs)
