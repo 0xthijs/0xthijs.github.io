@@ -76,7 +76,7 @@ I integrate AI tools throughout the development process. This repository demonst
 
 ## Project Log
 
-- **2026-02-15**: 🛡️ **Added Project 05 (Data Governance)**. An automated pipeline for HR data stress-testing and auditing.
+- **2026-02-15**: 🧹 **Added Project 05 (Data Governance)**. An automated pipeline for HR data stress-testing and auditing.
 - **2026-02-15**: 🗣️ **Added Project 10 (The 1:1 Architect)**. A Streamlit app to structure manager meetings, running locally for privacy.
 - **2026-02-13**: 🕸️ **Added Project 08 (Network Visualizer)**. A strategic ONA tool to diagnose organizational health (Silos, Inclusion, Productivity) using interactive network graphs.
 - **2026-02-12**: 🖋️ **Added Project 07 (Contract Generator)**. A web-based tool for automated contract drafting with real-time preview.
