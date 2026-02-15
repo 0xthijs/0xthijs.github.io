@@ -25,7 +25,7 @@ I do not write code from scratch; I architect solutions. I utilize AI agents to 
 
 *   **Orchestration**: Google Studio AI, Google Antigravity, Gemini Pro & Agentic Workflows.
 *   **Execution**: Python & SQL (AI-Generated & Audited).
-*   **Visualization**: Web Applications, Interactive Dashboards, Power BI, Excel
+*   **Visualization**: Web Applications, Interactive Dashboards, Power BI, Excel.
 *   **Collaboration**: Slack / Microsoft Teams, Linear / Jira, Miro, Notion.
 
 [LinkedIn](https://linkedin.com/in/thijsvanderaa) | [GitHub](https://github.com/0xthijs)
