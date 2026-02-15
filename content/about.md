@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 hidemeta: true
+disableShare: true
 ---
 
 ![Strategic HR AI Banner](/images/home-banner.png)
