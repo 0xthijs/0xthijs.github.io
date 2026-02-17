@@ -3,7 +3,7 @@ title: "💰 CompSense: Enterprise Compensation Dashboard"
 date: 2026-02-17
 summary: "A modern, React-based compensation planning tool featuring real-time budget modeling, interactive salary band visualization, and a premium enterprise UI."
 tags: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Vite"]
-weight: 0
+
 ---
 
 ## Project Overview

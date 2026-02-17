@@ -41,3 +41,13 @@ buildFuture = true
         name = "About"
         url = "/about/"
         weight = 10
+
+# Sort pages by date (newest first)
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
