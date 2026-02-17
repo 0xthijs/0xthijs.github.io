@@ -3,7 +3,7 @@ title: "📜 Automated Contract Generator"
 date: 2026-02-12
 summary: "A sleek, browser-based tool for generating employment contracts. Features dynamic form binding, real-time preview, and print-ready output."
 tags: ["Legal Tech", "JavaScript", "HTML/CSS", "PoC"]
-weight: 3
+
 ---
 
 ## Project Overview

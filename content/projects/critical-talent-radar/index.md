@@ -4,7 +4,7 @@ date: 2026-02-14
 draft: false
 description: "AI-driven retention strategy tool for HR, analyzing flight risk among high-performers."
 tags: ["HR Analytics", "Streamlit", "Python", "GenAI", "Gemini API"]
-weight: 1
+
 ---
 
 ## 🛡️ Critical Talent Risk Radar
