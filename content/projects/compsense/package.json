@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://0xthijs.github.io/hr-ai-portfolio/CompSense",
+  "homepage": "https://0xthijs.github.io/CompSense",
   "dependencies": {
     "@faker-js/faker": "^10.3.0",
     "@tailwindcss/vite": "^4.1.18",
