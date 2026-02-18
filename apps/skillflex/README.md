@@ -42,8 +42,6 @@ SkillFlex doesn't just match keywords; it prioritizes business continuity.
 **Live Demo:**
 ![SkillFlex Enterprise Demo](../../static/images/skillflex-demo-v3.webp)
 
-[INSERT YOUR LOOM/VIDEO LINK HERE]
-
 ### 2. Core Modules
 
 | Module | Function | Tech Stack |
@@ -76,7 +74,3 @@ python ingestion.py
 # 4. Launch Application
 python app.py
 ```
-
-## 📈 RoI & Future Roadmap
-*   **Q3 2026**: Integration with Workday/BambooHR APIs.
-*   **Q4 2026**: "Bias Detective" Module to scan gig descriptions for exclusionary language.
