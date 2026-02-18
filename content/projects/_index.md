@@ -32,6 +32,4 @@ description: |
 
 Here are my projects & experiments to solve workforce problems.
 
-Here are my projects & experiments to solve workforce problems.
-
 ---

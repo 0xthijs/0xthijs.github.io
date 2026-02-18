@@ -10,6 +10,11 @@
 
 **The Solution:** SkillFlex is an AI-native "Internal Mobility Engine" that creates a dynamic marketplace for talent. It uses **Google Gemini Pro** to infer "Live Skills" from unstructured data and matches employees to gigs based on a **Retention-Weighted Algorithm**.
 
+## 📺 Live Demo
+**See the "Premium SaaS" UI in acton:**
+
+![SkillFlex Enterprise Demo](../../static/images/skillflex-demo-v3.webp)
+
 ---
 
 ## 🏗️ System Architecture
@@ -38,9 +43,6 @@ graph TD
 
 ### 1. The "Retention-First" Marketplace
 SkillFlex doesn't just match keywords; it prioritizes business continuity.
-
-**Live Demo:**
-![SkillFlex Enterprise Demo](../../static/images/skillflex-demo-v3.webp)
 
 ### 2. Core Modules
 
