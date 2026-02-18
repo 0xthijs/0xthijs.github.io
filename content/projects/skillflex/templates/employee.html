@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+    <!-- Left Column: Profile -->
+    <div class="col-span-1">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
+            <div class="flex flex-col items-center text-center mb-6">
+                <div
+                    class="h-24 w-24 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl font-bold text-white mb-4 shadow-lg">
+                    {{ employee.name[:2] }}
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900">{{ employee.name }}</h1>
+                <p class="text-gray-500">{{ employee.job_role }}</p>
+                {% if employee.attrition == 'Yes' %}
+                <div class="mt-2 text-sm text-red-600 bg-red-50 px-3 py-1 rounded-full font-medium">
+                    {{ t.attrition_warning }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{{ t.department }}</h3>
+                    <p class="text-gray-900">{{ employee.department }}</p>
+                </div>
+                <div>
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{{ t.education }}</h3>
+                    <p class="text-gray-900">{{ employee.education_field }}</p>
+                </div>
+                <div>
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide">{{ t.inferred_skills }}</h3>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        {% set skills = employee.skills | from_json %}
+                        {% if skills is mapping %}
+                        {% for skill in skills.get('hard', []) %}
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">{{ skill }}</span>
+                        {% endfor %}
+                        {% for skill in skills.get('soft', []) %}
+                        <span class="px-2 py-1 bg-purple-50 text-purple-700 rounded text-xs">{{ skill }}</span>
+                        {% endfor %}
+                        {% else %}
+                        {% for skill in skills %}
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">{{ skill }}</span>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Matches -->
+    <div class="col-span-1 lg:col-span-2 space-y-6">
+        <h2 class="text-2xl font-bold text-gray-900 flex items-center">
+            {{ t.recommended_gigs }}
+            <span class="ml-3 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">{{ matches|length }}
+                {{ t.available }}</span>
+        </h2>
+
+        {% if not matches %}
+        <div class="bg-white rounded-xl p-8 text-center text-gray-500">
+            {{ t.no_matches }}
+        </div>
+        {% endif %}
+
+        {% for match in matches %}
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900">{{ match.title }}</h3>
+                    <p class="text-sm text-gray-500">{{ match.department }}</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-2xl font-bold {{ 'text-green-600' if match.score > 80 else 'text-blue-600' }}">
+                        {{ match.score }}%
+                    </div>
+                    <p class="text-xs text-gray-400">{{ t.match_score }}</p>
+                </div>
+            </div>
+
+            <!-- Match Bar -->
+            <div class="w-full bg-gray-100 rounded-full h-2.5 mb-4">
+                <div class="bg-gradient-to-r from-blue-500 to-green-500 h-2.5 rounded-full"
+                    style="width: {{ match.score }}%"></div>
+            </div>
+
+            <div class="mb-4">
+                <p class="text-xs text-gray-400 uppercase tracking-wide font-semibold mb-2">{{ t.matching_skills }}</p>
+                <div class="flex flex-wrap gap-2">
+                    {% for skill in match.common_skills %}
+                    <span
+                        class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-50 text-green-700 border border-green-100">
+                        ✓ {{ skill }}
+                    </span>
+                    {% endfor %}
+                    {% for skill in match.required_skills if skill not in match.common_skills %}
+                    <span
+                        class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-50 text-gray-400 border border-gray-100">
+                        {{ skill }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <button onclick="toggleGig(this)" data-assigned="false"
+                    class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+                    {{ t.assign_gig }}
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    function toggleGig(btn) {
+        const isAssigned = btn.getAttribute('data-assigned') === 'true';
+
+        if (!isAssigned) {
+            // Assign Action
+            btn.innerText = "{{ t.assigned }}";
+            btn.classList.add("bg-green-600", "hover:bg-green-700");
+            btn.classList.remove("bg-gray-900", "hover:bg-gray-800");
+            btn.setAttribute('data-assigned', 'true');
+        } else {
+            // Unassign Action
+            btn.innerText = "{{ t.assign_gig }}";
+            btn.classList.remove("bg-green-600", "hover:bg-green-700");
+            btn.classList.add("bg-gray-900", "hover:bg-gray-800");
+            btn.setAttribute('data-assigned', 'false');
+        }
+    }
+</script>
+{% endblock %}
