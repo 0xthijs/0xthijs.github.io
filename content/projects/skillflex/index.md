@@ -30,6 +30,12 @@ A fully responsive, modern UI designed to demonstrate "Senior Product" quality:
 *   **Role-Based Views:** Distinct dashboards for Managers (Risk Analysis) and Employees (Opportunity Feed).
 *   **Privacy-First:** Sensitive "Risk" data is strictly limited to the Manager view.
 
+## 📺 Live Demo (Walkthrough)
+
+**Watch the capabilities in action:**
+
+![SkillFlex Walkthrough](/images/skillflex-demo-v2.webp)
+
 ## 🛠️ Architecture & Tech Stack
 
 Refactored from a script-based PoC to a production-grade architecture to demonstrate maintainability and scalability/
