@@ -1,5 +1,5 @@
 ---
-title: "🔥 Predicting Burnout: A Composite Risk Model"
+title: "Predicting Burnout: A Composite Risk Model"
 date: 2026-02-09T15:00:00+07:00
 draft: false
 tags: ["Wellbeing", "Predictive Modeling", "Burnout"]

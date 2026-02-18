@@ -1,9 +1,8 @@
 ---
-title: "💰 CompSense: Enterprise Compensation Dashboard"
+title: "CompSense: Enterprise Compensation Dashboard"
 date: 2026-02-17
 summary: "A modern, React-based compensation planning tool featuring real-time budget modeling, interactive salary band visualization, and a premium enterprise UI."
 tags: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Vite"]
-
 ---
 
 ## Project Overview
@@ -17,11 +16,11 @@ tags: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Vite"]
 *   **Real-time Data Grid**: Detailed employee table that updates calculations instantly as you adjust parameters.
 *   **Premium Design**: Built with a clean, "Enterprise SaaS" aesthetic using Tailwind CSS and the *Outfit* typeface.
 
-## 🚀 Live Demo
+## Live Demo
 
 Explore the dashboard here:
 
-[👉 **Launch CompSense Dashboard**](https://0xthijs.github.io/CompSense/)
+[**Launch CompSense Dashboard**](https://0xthijs.github.io/CompSense/)
 
 ---
 
@@ -30,7 +29,7 @@ Explore the dashboard here:
 Built with a modern frontend stack focusing on performance and developer experience:
 
 *   **Framework**: React 19 + TypeScript + Vite
-*   **Styling**: Tailwind CSS v4 (using the new `@theme` configuration)
+*   **Styling**: Tailwind CSS v4
 *   **Visualization**: Recharts for responsive, composable charts
 *   **Icons**: Lucide React
 *   **Deployment**: GitHub Pages (CI/CD)

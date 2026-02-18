@@ -1,5 +1,5 @@
 ---
-title: "🚀 The Promotion Curse: Why Recently Promoted High Performers Leave"
+title: "The Promotion Curse: Why Recently Promoted High Performers Leave"
 date: 2026-02-09T14:45:00+07:00
 draft: false
 tags: ["Talent Management", "Python", "Retention Strategy"]
@@ -10,7 +10,7 @@ Conventional wisdom suggests that promoting an employee locks them in. It's a re
 
 **Data says otherwise.**
 
-In my latest analysis of the IBM HR dataset, I tested the "Stagnation Hypothesis"—the idea that high performers leave because they aren't moving up fast enough. What I found was the exact opposite.
+In my latest analysis of the IBM HR dataset, I tested the "Stagnation Hypothesis"—the idea that high performers leave because they aren't moving up fast enough. What I found was the opposite.
 
 ## The "Promotion Paradox"
 

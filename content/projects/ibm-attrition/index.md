@@ -1,5 +1,5 @@
 ---
-title: "🏃 Data-Driven HR: Why Your High Performers Are Leaving"
+title: "Data-Driven HR: Why Your High Performers Are Leaving"
 date: 2026-02-09T14:30:00+07:00
 draft: false
 tags: ["HR Analytics", "Python", "Attrition", "Data Science"]
@@ -24,7 +24,7 @@ The relationship with a manager is a strong predictor of retention. I analyzed a
 The data reveals a critical insight: **Employees are most likely to leave within their first year with a new manager (32% attrition rate)**. This risk drops significantly after the first year, stabilizing around 11-14%. This highlights the critical importance of onboarding and relationship-building during a manager transition.
 
 ### 3. Money Isn't the Main Motivator
-Does a higher salary hike retain talent? surprisingly, the difference is negligible:
+Does a higher salary hike retain talent? Surprisingly, the difference is negligible:
 *   **Average Salary Hike for Active Employees:** 15.23%
 *   **Average Salary Hike for Leavers:** 15.10%
 
@@ -41,7 +41,7 @@ Based on this data, here are three actionable takeaways:
 ---
 *Analysis performed using Python (Pandas, Matplotlib).*
 
-> **Data Verified** ✅
+> **Data Verified**
 > *   **Audit Date:** 2026-02-09
 > *   **Sample Sizes:** Validated (All segments > 30 participants)
 > *   **Precision:** Confirmed to 2 decimal places

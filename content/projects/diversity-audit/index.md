@@ -1,5 +1,5 @@
 ---
-title: "🌈 Diversity Audit 2026: Measuring True Equity"
+title: "Diversity Audit 2026: Measuring True Equity"
 date: 2026-02-09T15:15:00+07:00
 draft: false
 tags: ["DEI", "Pay Equity", "Data Audit"]
