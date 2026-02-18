@@ -2,55 +2,55 @@
 title: "🧠 SkillFlex: AI-Driven Internal Mobility Marketplace"
 date: 2026-02-18
 draft: false
-tags: ["Internal Mobility", "Matching Engine", "Python", "Flask", "AI Agents"]
-summary: "An internal talent marketplace that uses AI to infer employee skills and match them with open project 'gigs' to reduce attrition and boost retention."
+tags: ["Internal Mobility", "Matching Engine", "Python", "Flask", "AI Agents", "SQLAlchemy", "Pytest"]
+summary: "A production-grade internal talent marketplace that uses AI to infer employee skills and match them with open project 'gigs' to reduce attrition. Features a premium SaaS UI with Dark Mode."
 weight: 11
 ---
 
 ## 🚀 Overview
 
-**SkillFlex** is a Proof of Concept (PoC) for an internal talent marketplace designed to address high attrition rates by connecting employees with internal "gigs" or projects.
+**SkillFlex** is a sophisticated **Internal Talent Marketplace** designed to address high attrition rates by proactively connecting employees with internal "gigs" or projects.
 
-In many organizations, employees leave because they can't find growth opportunities internally. SkillFlex solves this by:
-1.  **Inferring Skills:** Using AI (Google Gemini) to analyze an employee's profile (Role, Dept, Education) and generate a verified skill profile—going beyond what's written in their outdated CV.
-2.  **Matching Engine:** A Python-based matching algorithm that pairs employees to open opportunities based on skill overlap and retention risk.
-3.  **Retention Boosting:** The algorithm deliberately boosts opportunities for employees flagged as "Flight Risk" to re-engage them.
+In many organizations, potential talent leaves because they can't find growth opportunities internally. SkillFlex solves this by transforming static HR data into dynamic opportunities using AI and a robust matching engine.
 
-## 📺 Live Demo (Walkthrough)
+## 🌟 Key Features
 
-Since this is a backend Python application (Flask + SQLite), it requires a server environment and cannot be hosted as a static page on GitHub. 
+### 1. AI-Powered Skill Inference
+Instead of relying on outdated CVs, SkillFlex uses **Google Gemini Pro** to analyze an employee's profile (Role, Department, Education, Tenure) and infer 5 Hard Skills and 3 Soft Skills. This creates a "Live Profile" that reflects actual capabilities.
 
-**Watch the capabilities in action:**
+### 2. Strategic Matching Engine
+Matches are calculated using a **Weighted Jaccard Similarity** algorithm that prioritizes business value:
+*   **Standard Match:** Skill Overlap / Total Required Skills.
+*   **Retention Boost:** Employees flagged as `Flight Risk` (Attrition = Yes) receive a strategic score boost to surface them for more opportunities, encouraging retention through mobility.
 
-![SkillFlex Walkthrough](/images/skillflex-demo.webp)
+### 3. Premium SaaS Experience
+A fully responsive, modern UI designed to demonstrate "Senior Product" quality:
+*   **Dark Mode Support:** System-wide dark mode with persistent state.
+*   **Glassmorphism Design:** Modern aesthetics using TailwindCSS.
+*   **Role-Based Views:** Distinct dashboards for Managers (Risk Analysis) and Employees (Opportunity Feed).
+*   **Privacy-First:** Sensitive "Risk" data is strictly limited to the Manager view.
 
 ## 🛠️ Architecture & Tech Stack
 
-The application is built as a lightweight, deployable PoC:
+Refactored from a script-based PoC to a production-grade architecture to demonstrate maintainability and scalability/
 
-*   **Backend:** Python (Flask)
-*   **Database:** SQLite (Relational Data)
-*   **AI Engine:** Google Gemini Pro (Skill Inference)
-*   **Frontend:** Tailwind CSS + Jinja2 Templates
-*   **Localization:** Fully bilingual (English / Dutch)
+*   **Backend:** Python (Flask), **SQLAlchemy ORM** (SQLite)
+*   **Frontend:** HTML5, **TailwindCSS**, Alpine.js logic
+*   **AI/Data:** Google Gemini Pro, Pandas
+*   **Quality Assurance:** **Pytest** suite for matching logic verification
+*   **Localization:** Bilingual support (English / Dutch)
 
-## ✨ Key Features
+## 📺 Live Demo (Walkthrough)
 
-### 1. AI Skill Inference
-Instead of asking employees to "update their profile" (which they never do), SkillFlex uses Generative AI to infer 5 Hard Skills and 3 Soft Skills based on their current role and tenure.
+Since this is a backend Python application, it cannot be hosted as a static page. However, you can view the architecture and code structure below.
 
-### 2. Strategic Matching Engine
-matches are calculated not just by keyword overlap, but by business priority.
-*   **Standard Match:** Skill Overlap / Total Required Skills
-*   **Retention Boost:** Employees with `Attrition = Yes` get a weighted score boost to surface them for more opportunities.
+**Manager Dashboard (Dark Mode):**
+*Real-time risk analysis and talent distribution.*
 
-### 3. Manager & Employee Personas
-*   **Manager View:** A dashboard identifying flight risks and talent distribution.
-*   **Employee View:** A personalized feed of gigs that match their inferred capabilities, with transparency on *why* they matched.
+**Employee Profile (Light Mode):**
+*Personalized gig recommendations based on inferred skills.*
 
 ## 💻 Usage
-
-This project acts as a functional prototype for HR Tech integration. It demonstrates how "Static" HR data (rows in a CSV) can be transformed into "Dynamic" opportunities using simple AI agents and matching logic.
 
 ### Local Development
 ```bash

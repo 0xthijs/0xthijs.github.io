@@ -1,11 +1,11 @@
 import pandas as pd
-import sqlite3
 import json
 import os
 import time
 import random
 import google.generativeai as genai
-from database import get_db_connection, init_db
+from database import init_db, get_db
+from models import Employee
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -73,16 +73,15 @@ def ingest_data():
         print(f"Error: {csv_path} not found.")
         return
 
-    conn = get_db_connection()
-    c = conn.cursor()
+    session = get_db()
     
     # Check if data already exists to avoid duplicates on re-run
-    c.execute("DELETE FROM employees") # Clear old data this time since we are re-ingesting correct data
-    c.execute("DELETE FROM sqlite_sequence WHERE name='employees'") # Reset Auto increment
+    session.query(Employee).delete()
+    # Reset Auto increment is handled by DB recreation mostly, or simply ignore for ORM
+    session.commit()
     print("Cleared existing employee data.")
 
-    # Limit to first 20-30 rows for PoC speed if dataset is huge (1472 rows is okay but API might be slow)
-    # Let's do 50 employees for a good sample size
+    # Limit to first 20-30 rows for PoC speed if dataset is huge
     df_subset = df.head(50)
     print(f"Processing {len(df_subset)} employees (subset of {len(df)})...")
     
@@ -97,18 +96,25 @@ def ingest_data():
         print(f"Enriching profile for: {name} ({role})...")
         skills_json = infer_skills(role, dept, edu)
         
-        flight_risk = 1 if attrition == 'Yes' else 0
+        flight_risk = (attrition == 'Yes')
         
-        c.execute('''
-            INSERT INTO employees (name, job_role, department, education_field, years_at_company, attrition, skills, flight_risk)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (name, role, dept, edu, years, attrition, skills_json, flight_risk))
+        employee = Employee(
+            name=name,
+            job_role=role,
+            department=dept,
+            education_field=edu,
+            years_at_company=int(years),
+            attrition=attrition,
+            skills=skills_json,
+            flight_risk=flight_risk
+        )
+        session.add(employee)
         
         # Rate limiting
         time.sleep(1)
 
-    conn.commit()
-    conn.close()
+    session.commit()
+    session.remove()
     print("Ingestion complete!")
 
 if __name__ == '__main__':

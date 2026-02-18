@@ -1,47 +1,22 @@
-import sqlite3
-import json
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, scoped_session
+from models import Base
 
-DB_NAME = 'talent.db'
+DB_NAME = 'sqlite:///talent.db'
 
-def get_db_connection():
-    conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row
-    return conn
+engine = create_engine(DB_NAME, echo=False)
+db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
 def init_db():
-    conn = get_db_connection()
-    c = conn.cursor()
-    
-    # Employees Table
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS employees (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            job_role TEXT NOT NULL,
-            department TEXT,
-            education_field TEXT,
-            years_at_company INTEGER,
-            attrition TEXT,
-            skills TEXT,  -- JSON string of inferred skills
-            flight_risk BOOLEAN DEFAULT 0
-        )
-    ''')
-    
-    # Gigs Table
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS gigs (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
-            department TEXT NOT NULL,
-            required_skills TEXT, -- JSON string
-            estimated_hours INTEGER,
-            description TEXT
-        )
-    ''')
-    
-    conn.commit()
-    conn.close()
-    print(f"Database {DB_NAME} initialized successfully.")
+    import models
+    Base.metadata.create_all(bind=engine)
+    print(f"Database initialized successfully with SQLAlchemy.")
+
+def get_db():
+    return db_session
+
+def close_db(e=None):
+    db_session.remove()
 
 if __name__ == '__main__':
     init_db()

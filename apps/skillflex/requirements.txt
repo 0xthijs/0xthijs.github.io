@@ -2,3 +2,5 @@ Flask
 pandas
 google-generativeai
 python-dotenv
+SQLAlchemy
+pytest
