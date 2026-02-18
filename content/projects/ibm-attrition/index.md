@@ -1,5 +1,5 @@
 ---
-title: "Data-Driven HR: Why Your High Performers Are Leaving"
+title: "🏃 Data-Driven HR: Why Your High Performers Are Leaving"
 date: 2026-02-09T14:30:00+07:00
 draft: false
 tags: ["HR Analytics", "Python", "Attrition", "Data Science"]
@@ -7,7 +7,7 @@ tags: ["HR Analytics", "Python", "Attrition", "Data Science"]
 
 In the modern workforce, retaining top talent is just as critical as recruiting it. Using IBM's HR Employee Attrition dataset, I conducted an analysis to uncover the hidden drivers of employee turnover. The results challenge some common assumptions about why people leave.
 
-## Key Findings
+## 🔍 Key Findings
 
 ### 1. High Performers Are at Risk
 A common belief is that high performers are more engaged and less likely to leave. However, my analysis shows that **High Performers (Performance Rating $\ge$ 4)** have an attrition rate of **16.37%**, which is actually *higher* than the global average of **16.12%**.
@@ -30,7 +30,7 @@ Does a higher salary hike retain talent? Surprisingly, the difference is negligi
 
 The gap is practically non-existent. While fair compensation is a baseline requirement, "throwing money at the problem" in the form of standard annual hikes does not appear to be a differentiator for retention.
 
-## Recommendations for HRBPs
+## 💡 Recommendations for HRBPs
 
 Based on this data, here are three actionable takeaways:
 
@@ -41,7 +41,7 @@ Based on this data, here are three actionable takeaways:
 ---
 *Analysis performed using Python (Pandas, Matplotlib).*
 
-> **Data Verified**
+> **Data Verified** ✅
 > *   **Audit Date:** 2026-02-09
 > *   **Sample Sizes:** Validated (All segments > 30 participants)
 > *   **Precision:** Confirmed to 2 decimal places
