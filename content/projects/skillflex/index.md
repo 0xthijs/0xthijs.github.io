@@ -7,65 +7,78 @@ summary: "A production-grade internal talent marketplace that uses AI to infer e
 weight: 11
 ---
 
-## 🚀 Overview
+## 💼 Executive Summary
+**The Problem:** High-performing employees often leave because they cannot find internal growth opportunities. Traditional HR systems (LMS/HRIS) rely on static, outdated skills data.
 
-**SkillFlex** is a sophisticated **Internal Talent Marketplace** designed to address high attrition rates by proactively connecting employees with internal "gigs" or projects.
+**The Solution:** SkillFlex is an AI-native "Internal Mobility Engine" that creates a dynamic marketplace for talent. It uses **Google Gemini Pro** to infer "Live Skills" from unstructured data and matches employees to gigs based on a **Retention-Weighted Algorithm**.
 
-In many organizations, potential talent leaves because they can't find growth opportunities internally. SkillFlex solves this by transforming static HR data into dynamic opportunities using AI and a robust matching engine.
+---
 
-## 🌟 Key Features
+## 🏗️ System Architecture
+*Visualizing the data flow from Unstructured Input to Strategic Match.*
 
-### 1. AI-Powered Skill Inference
-Instead of relying on outdated CVs, SkillFlex uses **Google Gemini Pro** to analyze an employee's profile (Role, Department, Education, Tenure) and infer 5 Hard Skills and 3 Soft Skills. This creates a "Live Profile" that reflects actual capabilities.
+```mermaid
+graph TD
+    A[Employee Profile] -->|Unstructured Data| B(Ingestion Pipeline)
+    B -->|Context Window| C{Gemini Pro Agent}
+    C -->|Structured JSON| D[Skills Database]
+    E[Manager Gigs] -->|Requirements| F[Matching Engine]
+    D --> F
+    F -->|Weighted Jaccard Algo| G[Opportunity Feed]
+    
+    subgraph "AI Logic Layer"
+    C
+    F
+    end
+    
+    subgraph "Retention Safeguard"
+    H[Attrition Risk Flags] -.->|Boost Score| F
+    end
+```
 
-### 2. Strategic Matching Engine
-Matches are calculated using a **Weighted Jaccard Similarity** algorithm that prioritizes business value:
-*   **Standard Match:** Skill Overlap / Total Required Skills.
-*   **Retention Boost:** Employees flagged as `Flight Risk` (Attrition = Yes) receive a strategic score boost to surface them for more opportunities, encouraging retention through mobility.
+## 📺 Product Capabilities
 
-### 3. Premium SaaS Experience
-A fully responsive, modern UI designed to demonstrate "Senior Product" quality:
-*   **Dark Mode Support:** System-wide dark mode with persistent state.
-*   **Glassmorphism Design:** Modern aesthetics using TailwindCSS.
-*   **Role-Based Views:** Distinct dashboards for Managers (Risk Analysis) and Employees (Opportunity Feed).
-*   **Privacy-First:** Sensitive "Risk" data is strictly limited to the Manager view.
+### 1. The "Retention-First" Marketplace
+SkillFlex doesn't just match keywords; it prioritizes business continuity.
 
-## 📺 Live Demo (Walkthrough)
+**Live Demo:**
+![SkillFlex Enterprise Demo](/images/skillflex-demo-v3.webp)
 
-**Watch the capabilities in action:**
+[INSERT YOUR LOOM/VIDEO LINK HERE]
 
-![SkillFlex Walkthrough](/images/skillflex-demo-v3.webp)
+### 2. Core Modules
 
-## 🛠️ Architecture & Tech Stack
+| Module | Function | Tech Stack |
+| :--- | :--- | :--- |
+| **Talent Ingestion** | Infers 5 Hard + 3 Soft skills from unstructured role/bio data. | `Google Gemini Pro` |
+| **Matching Engine** | Calculates `Jaccard Similarity` + `Flight Risk Boost` (1.2x multiplier). | `Python` / `Pandas` |
+| **Manager Dashboard** | Visualizes "At Risk" talent and distribution. | `Flask` / `Tailwind` |
+| **Employee Portal** | Personalized gig feed with "Why this matches you" explainability. | `Jinja2` / `Alpine.js` |
 
-Refactored from a script-based PoC to a production-grade architecture to demonstrate maintainability and scalability/
+---
 
-*   **Backend:** Python (Flask), **SQLAlchemy ORM** (SQLite)
-*   **Frontend:** HTML5, **TailwindCSS**, Alpine.js logic
-*   **AI/Data:** Google Gemini Pro, Pandas
-*   **Quality Assurance:** **Pytest** suite for matching logic verification
-*   **Localization:** Bilingual support (English / Dutch)
+## 🛠️ Technical Implementation
 
-## 📺 Live Demo (Walkthrough)
+### Prerequisites
+*   Python 3.10+
+*   Google Gemini API Key
 
-Since this is a backend Python application, it cannot be hosted as a static page. However, you can view the architecture and code structure below.
-
-**Manager Dashboard (Dark Mode):**
-*Real-time risk analysis and talent distribution.*
-
-**Employee Profile (Light Mode):**
-*Personalized gig recommendations based on inferred skills.*
-
-## 💻 Usage
-
-### Local Development
+### Quick Start
 ```bash
-# Install dependencies
+# 1. Install Dependencies
 pip install -r requirements.txt
 
-# Run the ingestion pipeline (Generates DB and infers skills)
+# 2. Configure Environment
+# Create .env and add: GOOGLE_API_KEY=your_key
+
+# 3. Run Ingestion (ETL)
+# (Optional: uses Gemini to re-infer skills from raw data)
 python ingestion.py
 
-# Run the web application
+# 4. Launch Application
 python app.py
 ```
+
+## 📈 RoI & Future Roadmap
+*   **Q3 2026**: Integration with Workday/BambooHR APIs.
+*   **Q4 2026**: "Bias Detective" Module to scan gig descriptions for exclusionary language.
