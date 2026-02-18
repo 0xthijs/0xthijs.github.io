@@ -1,5 +1,5 @@
 ---
-title: "SkillFlex: AI-Driven Internal Mobility Marketplace"
+title: "🧠 SkillFlex: AI-Driven Internal Mobility Marketplace"
 date: 2026-02-18
 draft: false
 tags: ["Internal Mobility", "Matching Engine", "Python", "Flask", "AI Agents"]

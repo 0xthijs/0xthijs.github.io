@@ -26,7 +26,7 @@ This repository serves as a portfolio of practical solutions — each project ad
 | 08 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
 | 09 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
 | 10 | [The 1:1 Architect](content/projects/one-on-one-architect/) ([⚡ Run Locally](content/projects/one-on-one-architect/)) | Can manager meetings be structured? | AI reframes complaints into data-driven strategy | Runs locally for complete privacy |
-| 11 | [SkillFlex Marketplace](content/projects/skillflex/) | **Can we retain talent via internal mobility?** | Matches skills to gigs + **Retention Logic** | Reduces flight risk via proactive matching |
+| 11 | [🧠 SkillFlex Marketplace](content/projects/skillflex/) | **Can we retain talent via internal mobility?** | Matches skills to gigs + **Retention Logic** | Reduces flight risk via proactive matching |
 
 ---
 
