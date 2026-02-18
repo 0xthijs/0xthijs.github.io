@@ -34,7 +34,7 @@ A fully responsive, modern UI designed to demonstrate "Senior Product" quality:
 
 **Watch the capabilities in action:**
 
-![SkillFlex Walkthrough](/images/skillflex-demo-v2.webp)
+![SkillFlex Walkthrough](/images/skillflex-demo.webp)
 
 ## 🛠️ Architecture & Tech Stack
 
