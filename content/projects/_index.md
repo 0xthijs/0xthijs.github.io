@@ -12,6 +12,8 @@ cascade:
 
 **Real Code. Real Problems. Real AI Solutions.**
 
+DEBUG_VISIBLE_CONTENT
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 2rem; border-radius: 1rem; border: 1px solid #475569; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
   <div style="display: flex; flex-direction: column; gap: 1rem;">
     <div style="display: flex; align-items: center; justify-content: space-between;">
