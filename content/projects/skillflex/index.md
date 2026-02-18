@@ -16,6 +16,14 @@ In many organizations, employees leave because they can't find growth opportunit
 2.  **Matching Engine:** A Python-based matching algorithm that pairs employees to open opportunities based on skill overlap and retention risk.
 3.  **Retention Boosting:** The algorithm deliberately boosts opportunities for employees flagged as "Flight Risk" to re-engage them.
 
+## 📺 Live Demo (Walkthrough)
+
+Since this is a backend Python application (Flask + SQLite), it requires a server environment and cannot be hosted as a static page on GitHub. 
+
+**Watch the capabilities in action:**
+
+![SkillFlex Walkthrough](/images/skillflex-demo.webp)
+
 ## 🛠️ Architecture & Tech Stack
 
 The application is built as a lightweight, deployable PoC:
