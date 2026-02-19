@@ -15,7 +15,7 @@ weight: 11
 ## 📺 Live Demo
 **See the "Premium SaaS" UI in acton:**
 
-![SkillFlex Enterprise Demo](/images/skillflex-demo-v3.webp)
+![SkillFlex Enterprise Demo](/images/skillflex-demo-v6-refined.webp)
 
 ---
 
