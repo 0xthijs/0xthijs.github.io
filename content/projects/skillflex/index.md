@@ -1,26 +1,24 @@
 ---
-title: "🧠 SkillFlex: AI-Driven Internal Mobility Marketplace"
+title: "🧠 SkillFlex"
 date: 2026-02-18
 draft: false
-tags: ["Internal Mobility", "Matching Engine", "Python", "Flask", "AI Agents", "SQLAlchemy", "Pytest"]
-summary: "A production-grade internal talent marketplace that uses AI to infer employee skills and match them with open project 'gigs' to reduce attrition. Features a premium SaaS UI with Dark Mode."
+tags: ["App", "Python", "Internal Mobility"]
+type: "App"
+summary: "An AI-native marketplace that infers employee skills from unstructured data to automatically match talent with internal projects, reducing attrition."
+demo: ""
 weight: 11
 ---
 
-## 💼 Executive Summary
-**The Problem:** High-performing employees often leave because they cannot find internal growth opportunities. Traditional HR systems (LMS/HRIS) rely on static, outdated skills data.
-
-**The Solution:** SkillFlex is an AI-native "Internal Mobility Engine" that creates a dynamic marketplace for talent. It uses **Google Gemini Pro** to infer "Live Skills" from unstructured data and matches employees to gigs based on a **Retention-Weighted Algorithm**.
-
-## 📺 Live Demo
-**See the "Premium SaaS" UI in acton:**
+## What It Does
+SkillFlex is an AI-driven internal talent marketplace that automatically matches employees to short-term projects ("gigs") based on their inferred skills. It replaces static, manual skill profiles with dynamic, AI-generated talent signals to uncover hidden potential within the workforce.
 
 ![SkillFlex Enterprise Demo](/images/skillflex-demo-v6-refined.webp)
 
----
+## The Problem It Solves
+High-performing employees often leave diverse organizations because they cannot find internal growth opportunities, while managers struggle to find talent for short-term needs. Traditional HR systems rely on manual data entry, resulting in outdated skills inventories that fail to capture an employee's true capabilities or flight risk.
 
-## 🏗️ System Architecture
-*Visualizing the data flow from Unstructured Input to Strategic Match.*
+## How It Works
+The system uses a **Google Gemini Pro** agent to ingest unstructured data (resumes, project history, Slack/Teams activity) and infer a "Live Skills" profile for each employee. It then uses a retention-weighted algorithm to match these profiles against open internal gigs, prioritizing matches that reduce attrition risk for high-value talent.
 
 ```mermaid
 graph TD
@@ -41,40 +39,22 @@ graph TD
     end
 ```
 
-## 📺 Product Capabilities
+## Key Features
+- **AI Skill Inference**: Automatically extracts 5 hard and 3 soft skills from unstructured text using LLMs, removing the need for manual profile updates.
+- **Retention-Weighted Matching**: The matching engine applies a 1.2x score multiplier to employees flagged as "High Flight Risk," surfacing opportunities to retain them.
+- **Premium SaaS Experience**: A fully responsive, dark-mode enabled UI (built with Flask & Tailwind) that provides a consumer-grade experience for enterprise users.
+- **Explainable AI**: Every gig recommendation includes a "Why this matches you" section to build user trust in the AI suggestions.
 
-### 1. The "Retention-First" Marketplace
-SkillFlex doesn't just match keywords; it prioritizes business continuity.
+## Results / Impact
+This Proof of Concept demonstrates how Generative AI can transform internal mobility from a passive database into an active retention engine. By inferring skills rather than asking for them, SkillFlex reduces the friction of profile creation to zero, promoting higher adoption rates than traditional manual systems.
 
-### 2. Core Modules
+## Tech Stack
+| Layer | Technology |
+|---|---|
+| Frontend | Flask (Jinja2) / TailwindCSS / Alpine.js |
+| Backend | Python / Flask |
+| AI Engine | Google Gemini Pro |
+| Data | SQLAlchemy / SQLite (PoC) |
+| Deployment | Localhost (Demo) |
 
-| Module | Function | Tech Stack |
-| :--- | :--- | :--- |
-| **Talent Ingestion** | Infers 5 Hard + 3 Soft skills from unstructured role/bio data. | `Google Gemini Pro` |
-| **Matching Engine** | Calculates `Jaccard Similarity` + `Flight Risk Boost` (1.2x multiplier). | `Python` / `Pandas` |
-| **Manager Dashboard** | Visualizes "At Risk" talent and distribution. | `Flask` / `Tailwind` |
-| **Employee Portal** | Personalized gig feed with "Why this matches you" explainability. | `Jinja2` / `Alpine.js` |
-
----
-
-## 🛠️ Technical Implementation
-
-### Prerequisites
-*   Python 3.10+
-*   Google Gemini API Key
-
-### Quick Start
-```bash
-# 1. Install Dependencies
-pip install -r requirements.txt
-
-# 2. Configure Environment
-# Create .env and add: GOOGLE_API_KEY=your_key
-
-# 3. Run Ingestion (ETL)
-# (Optional: uses Gemini to re-infer skills from raw data)
-python ingestion.py
-
-# 4. Launch Application
-python app.py
-```
+[View Code](https://github.com/0xthijs/hr-ai-portfolio/tree/main/apps/skillflex)
