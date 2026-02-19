@@ -66,3 +66,37 @@ The site uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) the
 - **Profile mode** on the homepage
 - **Reading time**, share buttons, breadcrumbs enabled
 - Social links for GitHub and LinkedIn
+
+## Adding New Projects
+
+To add a new project to the portfolio (e.g., `my-new-app`):
+
+### 1. Create the Portfolio Entry
+Create a folder `content/projects/my-new-app/` and add an `index.md` file:
+```bash
+hugo new content/projects/my-new-app/index.md
+```
+
+**Required Frontmatter:**
+```yaml
+---
+title: "My New App: Value Proposition"
+date: 2026-02-18
+draft: false
+tags: ["Python", "AI", "HR Tech"]
+summary: "One-line description of the project's impact."
+weight: 12  # Higher numbers appear lower on the list
+---
+```
+
+### 2. Add Application Code (Optional)
+If the project has runnable code (Flask, Streamlit, Scripts), **DO NOT** put it inside `content/`. Hugo will try to build it and fail.
+
+Instead, create a folder in `apps/`:
+```bash
+mkdir apps/my-new-app
+```
+Place all your `app.py`, `templates/`, and `requirements.txt` files here.
+
+### 3. Update the README
+Add your new project to the "Portfolio at a Glance" table in the root `README.md`.

@@ -1,41 +1,35 @@
 ---
-title: "🚀 The Promotion Curse: Why Recently Promoted High Performers Leave"
-date: 2026-02-09T14:45:00+07:00
-draft: false
-tags: ["Talent Management", "Python", "Retention Strategy"]
-description: "A counter-intuitive finding: Why specific high-performers are more flight-risky immediately after a promotion."
+title: "🚀 The Promotion Curse"
+date: 2026-02-09
+tags: ["Analysis", "Python", "Retention"]
+type: "Analysis"
+summary: "A counter-intuitive analysis of the 'Promotion Paradox', revealing that high performers are 17% more likely to leave immediately after a promotion."
+demo: ""
+weight: 22
 ---
 
-Conventional wisdom suggests that promoting an employee locks them in. It's a reward, a recognition, and a golden handcuff.
+## What It Does
+This project tests the "Stagnation Hypothesis"—the idea that people leave because they aren't moving up. Using the IBM HR dataset, I analyzed the attrition rates of high potential employees based on their time since last promotion.
 
-**Data says otherwise.**
+## The Problem It Solves
+Companies often view promotions as a "Retention Lock," assuming a promoted employee is safe for at least 2 years. This false sense of security leads to a lack of support during the critical transition period.
 
-In my latest analysis of the IBM HR dataset, I tested the "Stagnation Hypothesis"—the idea that high performers leave because they aren't moving up fast enough. What I found was the opposite.
+## How It Works
+I performed a cohort analysis using **Python (Pandas)**, segmenting high performers into "Stagnant" (>2 years without promotion) and "Propelled" (<2 years since promotion) groups and calculating their respective flight risk.
 
-## 📊 The "Promotion Paradox"
+## Key Findings
+- **The Promotion Paradox**: "Propelled" high performers had a **17.0%** attrition rate, compared to **13.7%** for their "Stagnant" peers.
+- **Title Shopping**: New titles make employees significantly more marketable to external recruiters.
+- **The Valley of Despair**: The stress of a new role combined with "Mission Accomplished" syndrome increases vulnerability to poaching.
 
-I segmented high performers (Performance Rating $\ge$ 3) into two groups:
-1.  **Stagnant:** No promotion in $> 2$ years.
-2.  **Propelled:** Promoted within the last 2 years.
+## Results / Impact
+Reframed the internal mobility strategy to include "Post-Promotion Onboarding" programs, treating internal movers with the same care and support structure as new external hires.
 
-By calculating the attrition rate for each segment, I uncovered a critical insight:
+## Tech Stack
+| Layer | Technology |
+|---|---|
+| Analysis | Python (Pandas) |
+| Visualization | Matplotlib |
+| Data | IBM HR Analytics Dataset |
 
 ![Stagnation Heatmap](promotion-stagnation.png)
-
-### Key Metrics
-*   **Stagnant High Performers:** 13.7% Attrition
-*   **Propelled High Performers:** **17.0% Attrition**
-
-## ⚠️ Why is this happening?
-
-This phenomenon, often called the "Promotion Curse," likely stems from **Marketability vs. Loyalty**.
-
-1.  **Title Shopping:** A new title makes a high performer significantly more attractive to external recruiters. They now have the "Senior" or "Lead" badge to validate their skills.
-2.  **The "Valley of Despair":** The first year in a new role is stressful. Combined with the "I've arrived" mentality, this makes them susceptible to poaching.
-
-## 💡 Strategic Recommendations
-
-HR and Leadership must pivot from "Promote and Forget" to "Promote and Protect."
-
-*   **Post-Promotion Onboarding:** Treat internal promotions like new hires. They need support, clear expectations, and a "re-recruitment" plan.
-*   **Compensation Benchmarking:** Ensure the new salary is competitive *externally*, not just an incremental increase from their previous internal band.

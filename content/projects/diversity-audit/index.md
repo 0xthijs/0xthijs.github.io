@@ -1,34 +1,36 @@
 ---
-title: "🌈 Diversity Audit 2026: Measuring True Equity"
-date: 2026-02-09T15:15:00+07:00
-draft: false
-tags: ["DEI", "Pay Equity", "Data Audit"]
-description: "An audit of Gender Pay Gap and Representation across the organization. Good news on pay, work needed on leadership pipelines."
+title: "🌈 Diversity Audit 2026"
+date: 2026-02-09
+tags: ["Analysis", "Python", "DEI"]
+type: "Analysis"
+summary: "A rigorous audit of the Gender Pay Gap and Leadership Representation, uncovering a 'leaky pipeline' despite achieving pay equity."
+demo: ""
+weight: 17
 ---
 
-Diversity, Equity, and Inclusion (DEI) requires rigorous measurement. I conducted a full audit of our workforce data to answer two questions: **"Do we pay fairly?"** and **"Do we promote equitably?"**
+## What It Does
+This project is a comprehensive audit of workforce diversity data, designed to answer two critical questions: "Do we pay fairly?" (Pay Equity) and "Do we promote equitably?" (Opportunity Equity).
 
-## 💰 The Good News: Pay Equity
+## The Problem It Solves
+DEI initiatives often rely on good intentions rather than hard data. Without granular measurement, organizations cannot identify if their diversity gaps are caused by bias in hiring, paying, or promoting.
 
-We calculated the **Adjusted Pay Gap**—comparing the average monthly income of men and women *within the same job level*.
+## How It Works
+I used **Python** to calculate the **Adjusted Pay Gap**, comparing average monthly income between genders *within the same job level* to isolate the effect of gender from seniority. I also mapped the "Representation Funnel" to visualize the drop-off rates at each management tier.
+
+## Key Features
+- **Adjusted Pay Gap Analysis**: Isolates pay discrepancies by controlling for role and level.
+- **Pipeline Visualization**: Sankey-style analysis of the "Leaky Pipeline" to the C-Suite.
+- **Representation Heatmap**: Identifies specific departments lacking diversity.
+
+## Results / Impact
+- **Pay Equity Confirmed**: Validated that the adjusted pay gap is **< 2%** across all levels.
+- **Leaky Pipeline Identified**: Revealed a significant drop in female representation from Director (48%) to Executive (34%), shifting the strategy to focus on internal sponsorship rather than just hiring.
+
+## Tech Stack
+| Layer | Technology |
+|---|---|
+| Analysis | Python (Pandas) |
+| Visualization | Matplotlib / Seaborn |
+| Data | HRIS Snapshot |
 
 ![Gender Pay Gap Chart](gender-pay-gap.png)
-
-The results are positive. The gap across all levels is **less than 2%**, and at Job Level 3, female employees actually earn slightly more on average. This indicates our compensation bands are working effectively to prevent systemic gender bias in pay.
-
-## 📉 The Challenge: Leadership Representation
-
-While pay is equal, *access* to higher-paying roles is not.
-
-![Representation Chart](gender-representation.png)
-
-Our analysis shows a "leaky pipeline" to the C-Suite:
-*   **Level 4 (Director):** 48% Female (Near Parity)
-*   **Level 5 (Executive):** **34% Female**
-
-## 🎯 Conclusion & Next Steps
-We have solved the "Equal Pay for Equal Work" equation. The next frontier is **"Equal Access to Work."**
-
-HR Strategy will now focus on:
-1.  **Sponsorship Programs:** Pairing Level 4 high-potential women with Executive sponsors.
-2.  **Succession Planning:** Ensuring diverse slates for all Level 5 vacancies.
