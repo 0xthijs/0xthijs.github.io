@@ -56,3 +56,9 @@ buildFuture = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[module]
+  [module.mounts]
+    source = "content"
+    target = "content"
+    excludeFiles = ["**/node_modules/**"]
