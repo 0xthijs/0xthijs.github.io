@@ -89,19 +89,19 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-          <h2 className="text-lg font-bold text-slate-900 mb-4">{t('nav.settings')}</h2>
+          <h2 className="text-lg font-bold text-slate-900 mb-4">{t('insight.title')}</h2>
           <div className="prose prose-slate bg-slate-50 p-4 rounded-lg">
             <p className="text-sm">
-              Strategic insights are generated based on the current workforce data.
+              {t('insight.desc')}
             </p>
             <ul className="text-sm mt-4 space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-amber-500 font-bold">•</span>
-                <span>Engineering faces the highest replacement need due to market attrition factors.</span>
+                <span>{t('insight.engineering')}</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 font-bold">•</span>
-                <span>Sales growth targets require aggressive hiring starting Q3 2026.</span>
+                <span>{t('insight.sales')}</span>
               </li>
             </ul>
           </div>

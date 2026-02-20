@@ -39,7 +39,7 @@ export default function PlanPage() {
                             {t('plan.growth_target')}: <span className="text-blue-600 font-bold">{(growthRate * 100).toFixed(1)}%</span>
                         </label>
                         <p className="text-xs text-slate-500 mb-3 bg-slate-50 p-2 rounded border border-slate-100 italic">
-                            Positive % = Expanding the team. Negative % = Downsizing.
+                            {t('plan.growth_desc')}
                         </p>
                         <input
                             type="range"
@@ -51,8 +51,8 @@ export default function PlanPage() {
                             className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                         />
                         <div className="flex justify-between text-xs text-slate-400 mt-2">
-                            <span>Contraction (-5%)</span>
-                            <span>High Growth Mode (20%)</span>
+                            <span>{t('plan.contraction')}</span>
+                            <span>{t('plan.high_growth')}</span>
                         </div>
                     </div>
                 </div>
@@ -64,21 +64,21 @@ export default function PlanPage() {
                 {/* Executive Summary */}
                 <div className="lg:col-span-2 space-y-6">
                     <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 print:shadow-none print:border-0">
-                        <h2 className="text-2xl font-bold text-slate-900 mb-6 font-serif">Executive Summary</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-6 font-serif">{t('plan.exec_summary')}</h2>
                         <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                            {plan.summary}
+                            {t('plan.summary_template',
+                                plan.departmentalPlans.reduce((acc, curr) => acc + curr.totalHiringTarget, 0),
+                                plan.totalRetirements
+                            )}
                         </p>
                         <p className="text-slate-600 leading-relaxed">
-                            This forecast assumes a consistent <strong className="text-slate-900">{(growthRate * 100).toFixed(1)}%</strong> year-over-year
-                            growth rate. Key risk areas include <strong className="text-red-600">Engineering</strong> (high attrition probability) and
-                            <strong className="text-amber-600"> Operations</strong> (retirement wave in 2028).
+                            {t('plan.forecast_template', (growthRate * 100).toFixed(1))}
                         </p>
 
                         <div className="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
-                            <h4 className="font-bold text-blue-900 mb-1">Recommendation</h4>
+                            <h4 className="font-bold text-blue-900 mb-1">{t('plan.recommendation')}</h4>
                             <p className="text-blue-800 text-sm">
-                                Initiate a "Knowledge Transfer" program immediately for the <strong>{plan.totalRetirements}</strong> senior employees identified
-                                as retiring within the strategic window.
+                                {t('plan.rec_text', plan.totalRetirements)}
                             </p>
                         </div>
                     </div>
@@ -112,19 +112,19 @@ export default function PlanPage() {
                 {/* Sidebar Summary */}
                 <div className="space-y-6">
                     <div className="bg-slate-900 text-white p-6 rounded-xl shadow-lg">
-                        <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Total Impact</h3>
+                        <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">{t('plan.total_impact')}</h3>
 
                         <div className="space-y-6">
                             <div>
                                 <p className="text-slate-400 text-xs uppercase mb-1">{t('plan.hiring_gap')}</p>
                                 <p className="text-4xl font-bold">{plan.departmentalPlans.reduce((acc, curr) => acc + curr.totalHiringTarget, 0)}</p>
-                                <p className="text-green-400 text-xs mt-1">Positions to fill by 2030</p>
+                                <p className="text-green-400 text-xs mt-1">{t('plan.positions_fill')}</p>
                             </div>
 
                             <div className="border-t border-slate-700 pt-6">
-                                <p className="text-slate-400 text-xs uppercase mb-1">Cost of Attrition (Est.)</p>
+                                <p className="text-slate-400 text-xs uppercase mb-1">{t('plan.cost_attrition')}</p>
                                 <p className="text-2xl font-bold text-red-300">${(plan.highRiskAttrition * 45000).toLocaleString()}</p>
-                                <p className="text-slate-500 text-xs mt-1">Recruitment & Training</p>
+                                <p className="text-slate-500 text-xs mt-1">{t('plan.recruitment_training')}</p>
                             </div>
                         </div>
                     </div>

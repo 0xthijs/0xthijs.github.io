@@ -26,8 +26,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         localStorage.setItem('hr-analytics-lang', lang);
     };
 
-    const t = (key: keyof typeof translations['en']) => {
-        return translations[language][key] || key;
+    const t = (key: keyof typeof translations['en'], ...args: (string | number)[]) => {
+        let translation = translations[language][key] || key;
+
+        if (args.length > 0) {
+            args.forEach((arg, index) => {
+                translation = translation.replace(`{${index}}`, String(arg));
+            });
+        }
+
+        return translation;
     };
 
     return (

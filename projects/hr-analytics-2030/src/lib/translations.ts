@@ -29,11 +29,30 @@ export const translations = {
 
         // Plan
         "plan.title": "Workforce scenario planning",
+        "plan.subtitle": "Strategic hiring roadmap based on predictive modeling",
         "plan.growth_target": "Growth target (YoY)",
+        "plan.growth_desc": "Positive % = Expanding the team. Negative % = Downsizing.",
+        "plan.contraction": "Contraction (-5%)",
+        "plan.high_growth": "High growth mode (20%)",
         "plan.current_headcount": "Current headcount",
         "plan.projected_headcount": "Projected headcount",
         "plan.hiring_gap": "Hiring gap",
         "plan.dept_breakdown": "Department breakdown",
+        "plan.exec_summary": "Executive summary",
+        "plan.summary_template": "To meet 2030 goals, we need to hire {0} new employees across all departments, accounting for {1} retirements and predicted attrition.",
+        "plan.forecast_template": "This forecast assumes a consistent {0}% year-over-year growth rate. Key risk areas include Engineering (high attrition probability) and Operations (retirement wave in 2028).",
+        "plan.recommendation": "Recommendation",
+        "plan.rec_text": "Initiate a \"Knowledge Transfer\" program immediately for the {0} senior employees identified as retiring within the strategic window.",
+        "plan.total_impact": "Total impact",
+        "plan.positions_fill": "Positions to fill by 2030",
+        "plan.cost_attrition": "Cost of attrition (est.)",
+        "plan.recruitment_training": "Recruitment & training",
+
+        // Insights
+        "insight.title": "Strategic insight",
+        "insight.desc": "Strategic insights are generated based on the current workforce data.",
+        "insight.engineering": "Engineering faces the highest replacement need due to market attrition factors.",
+        "insight.sales": "Sales growth targets require aggressive hiring starting Q3 2026.",
     },
     nl: {
         // Navigation
@@ -63,10 +82,29 @@ export const translations = {
 
         // Plan
         "plan.title": "Scenario planning",
+        "plan.subtitle": "Strategische routekaart op basis van voorspellende modellen",
         "plan.growth_target": "Groei doelstelling (J-o-J)",
+        "plan.growth_desc": "Positief % = Uitbreiding. Negatief % = Inkrimping.",
+        "plan.contraction": "Krimp (-5%)",
+        "plan.high_growth": "Hoge groei (20%)",
         "plan.current_headcount": "Huidig personeelsbestand",
         "plan.projected_headcount": "Verwacht personeelsbestand",
         "plan.hiring_gap": "Wervingsbehoefte",
         "plan.dept_breakdown": "Afdeling overzicht",
+        "plan.exec_summary": "Managementsamenvatting",
+        "plan.summary_template": "Om de doelen van 2030 te halen, moeten we {0} nieuwe werknemers aannemen, rekening houdend met {1} pensioneringen en voorspeld verloop.",
+        "plan.forecast_template": "Deze prognose gaat uit van een consistente groei van {0}%. Risicogebieden zijn Engineering (hoog verloop) en Operations (pensioengolf in 2028).",
+        "plan.recommendation": "Aanbeveling",
+        "plan.rec_text": "Start direct een \"Kennisoverdracht\" programma voor de {0} senior medewerkers die binnenkort met pensioen gaan.",
+        "plan.total_impact": "Totale impact",
+        "plan.positions_fill": "In te vullen functies tot 2030",
+        "plan.cost_attrition": "Kosten van verloop (schatting)",
+        "plan.recruitment_training": "Werving & opleiding",
+
+        // Insights
+        "insight.title": "Strategisch inzicht",
+        "insight.desc": "Inzichten worden gegenereerd op basis van de huidige personeelsdata.",
+        "insight.engineering": "Engineering heeft de hoogste vervangingsvraag door marktgebonden verloop.",
+        "insight.sales": "Verkoopdoelstellingen vereisen agressieve werving vanaf Q3 2026.",
     }
 };
