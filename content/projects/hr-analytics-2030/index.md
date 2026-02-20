@@ -15,7 +15,7 @@ cover:
 ## What It Does
 **HR Analytics 2030** is a secure, local-first dashboard that transforms raw HRIS data into actionable workforce intelligence. Unlike traditional BI tools that require cloud uploads, this application runs entirely in your browser using **IndexedDB** and **Client-Side Logic**, ensuring sensitive employee data never leaves your device.
 
-[🚀 **Launch Live Dashboard**](/projects/hr-analytics-2030/)
+[🚀 **Launch Live Dashboard**](/projects/hr-analytics-dashboard/)
 
 ## The Problem It Solves
 HR teams often struggle with:
