@@ -4,6 +4,9 @@ title = 'Thijs van der Aa'
 theme = 'PaperMod'
 buildFuture = true
 
+[author]
+    name = "Thijs van der Aa"
+
 [params]
     defaultTheme = 'dark'
     ShowReadingTime = false
