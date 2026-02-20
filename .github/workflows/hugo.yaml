@@ -37,22 +37,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Diagnostic Info
-        run: |
-          echo "=== DIAGNOSTICS ==="
-          echo "Node Version:"
-          node -v
-          echo "Hugo Version:"
-          hugo version || echo "Hugo not found in path"
-          echo "Current Directory:"
-          pwd
-          echo "Directory contents (depth 2):"
-          ls -R public || echo "No public dir yet"
-          ls -R static || echo "No static dir"
-          echo "Submodules:"
-          git submodule status
-          echo "==================="
-
       - name: Build with Hugo
         run: hugo --minify
 

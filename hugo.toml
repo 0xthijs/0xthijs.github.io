@@ -5,7 +5,7 @@ title = 'Thijs van der Aa'
 theme = 'PaperMod'
 buildFuture = true
 
-[author]
+[params.author]
     name = "Thijs van der Aa"
 
 [params]
