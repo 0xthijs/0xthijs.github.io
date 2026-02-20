@@ -52,13 +52,29 @@ export default function Sidebar() {
 
             <div className="p-4 border-t border-slate-800 space-y-4">
                 {/* Language Toggle */}
-                <div className="bg-slate-800/50 rounded-lg p-3 flex items-center justify-between">
-                    <span className="text-xs text-slate-400 font-medium">Language / Taal</span>
+                {/* Language Toggle */}
+                <div className="bg-slate-800 rounded-lg p-1 flex">
                     <button
-                        onClick={() => setLanguage(language === 'en' ? 'nl' : 'en')}
-                        className="flex items-center gap-2 px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs font-bold transition-colors"
+                        onClick={() => setLanguage('en')}
+                        className={clsx(
+                            "flex-1 py-1.5 text-xs font-medium rounded-md transition-all duration-200",
+                            language === 'en'
+                                ? "bg-slate-600 text-white shadow-sm"
+                                : "text-slate-400 hover:text-white"
+                        )}
                     >
-                        <span>{language === 'en' ? '🇺🇸 EN' : '🇳🇱 NL'}</span>
+                        English
+                    </button>
+                    <button
+                        onClick={() => setLanguage('nl')}
+                        className={clsx(
+                            "flex-1 py-1.5 text-xs font-medium rounded-md transition-all duration-200",
+                            language === 'nl'
+                                ? "bg-slate-600 text-white shadow-sm"
+                                : "text-slate-400 hover:text-white"
+                        )}
+                    >
+                        Nederlands
                     </button>
                 </div>
 
