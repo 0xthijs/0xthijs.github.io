@@ -12,10 +12,10 @@ description: |
   **Real Code. Real Problems. Real AI Solutions.**
 ---
 
-**Enterprise Internal Mobility Engine.**
-A production-grade talent marketplace that uses **Google Gemini Pro** to infer skills and reduce attrition. features a full matching engine, dark mode UI, and documented ROI.
+**📊 Local-First VS Code for HR Data.**
+A privacy-first predictive analytics platform. Features **client-side AI** for attrition modeling, interactive workforce planning scenarios, and secure CSV processing—all running 100% in your browser.
 
-[View Case Study & Demo](/projects/skillflex/)
+[View Live Dashboard](/projects/hr-analytics-2030/)
 
 Here are my projects & experiments to solve workforce problems.
 
