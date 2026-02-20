@@ -21,10 +21,39 @@ export default function UploadPage() {
             skipEmptyLines: true,
             complete: async (results) => {
                 if (results.data && results.data.length > 0) {
-                    // Filter: Ensure row has required fields AND a valid ID for Dexie
-                    const validData = results.data.filter((row: any) => {
-                        return row.id && row.name && row.department;
-                    }) as Employee[];
+                    // Helper to normalize keys (remove spaces, lowercase)
+                    const normalizeKey = (key: string) => key.trim().toLowerCase().replace(/\s+/g, '');
+
+                    // Map of normalized CSV headers to Schema keys
+                    const keyMap: Record<string, keyof Employee> = {
+                        'id': 'id', 'employeeid': 'id',
+                        'name': 'name', 'employeename': 'name', 'fullname': 'name',
+                        'department': 'department', 'dept': 'department',
+                        'role': 'role', 'jobtitle': 'role', 'position': 'role',
+                        'age': 'age',
+                        'gender': 'gender',
+                        'tenure': 'tenure', 'yearsofservice': 'tenure',
+                        'salary': 'salary', 'annualsalary': 'salary',
+                        'performancerating': 'performanceRating', 'rating': 'performanceRating', 'perf': 'performanceRating'
+                    };
+
+                    // Sanitize and Map Data
+                    const validData: Employee[] = results.data
+                        .map((rawRow: any) => {
+                            const newRow: any = {};
+                            Object.keys(rawRow).forEach(csvKey => {
+                                const cleanKey = normalizeKey(csvKey);
+                                const schemaKey = keyMap[cleanKey];
+                                if (schemaKey) {
+                                    newRow[schemaKey] = rawRow[csvKey];
+                                }
+                            });
+                            return newRow;
+                        })
+                        .filter((row: any) => {
+                            // Strict Validation: Must have at least ID, Name, Department
+                            return row.id && row.name && row.department;
+                        }) as Employee[];
 
                     if (validData.length > 0) {
                         await addEmployees(validData);
@@ -32,7 +61,7 @@ export default function UploadPage() {
                         setMessage(`Successfully imported ${validData.length} records.`);
                     } else {
                         setStatus('error');
-                        setMessage('No valid records found. Ensure CSV has "id", "name", and "department" columns.');
+                        setMessage('No valid records found. Please check your CSV headers (e.g., "id", "name", "department").');
                     }
                 }
             },

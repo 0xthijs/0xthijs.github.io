@@ -1,4 +1,5 @@
 baseURL = 'https://0xthijs.github.io/'
+ignoreFiles = ["^projects/hr-analytics-2030/.*"]
 languageCode = 'en-us'
 title = 'Thijs van der Aa'
 theme = 'PaperMod'
