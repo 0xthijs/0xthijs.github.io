@@ -5,11 +5,13 @@ import Papa from 'papaparse';
 import { useAddEmployees } from '@/hooks/useEmployees';
 import { Employee } from '@/types';
 import { FaCloudUploadAlt, FaCheckCircle, FaExclamationCircle, FaUndo } from 'react-icons/fa';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function UploadPage() {
     const { addEmployees, clearEmployees } = useAddEmployees();
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState('');
+    const { t } = useLanguage();
 
     const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
@@ -58,16 +60,16 @@ export default function UploadPage() {
                     if (validData.length > 0) {
                         await addEmployees(validData);
                         setStatus('success');
-                        setMessage(`Successfully imported ${validData.length} records.`);
+                        setMessage(`${t('upload.success')} (${validData.length} records)`);
                     } else {
                         setStatus('error');
-                        setMessage('No valid records found. Please check your CSV headers (e.g., "id", "name", "department").');
+                        setMessage(t('upload.error'));
                     }
                 }
             },
             error: (error) => {
                 setStatus('error');
-                setMessage(`Parse error: ${error.message}`);
+                setMessage(`${t('upload.error')}: ${error.message}`);
             }
         });
     };
@@ -84,14 +86,14 @@ export default function UploadPage() {
     return (
         <div className="max-w-2xl mx-auto">
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-slate-900">Upload Data</h1>
-                <p className="text-slate-500 mt-2">Import your HRIS export (CSV) to run the predictive engines.</p>
+                <h1 className="text-3xl font-bold text-slate-900">{t('upload.title')}</h1>
+                <p className="text-slate-500 mt-2">{t('upload.desc')}</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 text-center">
                 <div className="mb-6">
                     <a
-                        href="/projects/hr-analytics-2030/dummy_employees.csv"
+                        href="/projects/hr-analytics-dashboard/dummy_employees.csv"
                         download
                         className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 hover:underline"
                     >
@@ -132,7 +134,7 @@ export default function UploadPage() {
                     className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors font-medium text-sm"
                 >
                     <FaUndo className="w-4 h-4" />
-                    Reset Database & Clear All Data
+                    {t('upload.reset')}
                 </button>
             </div>
         </div>

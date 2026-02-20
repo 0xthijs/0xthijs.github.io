@@ -4,21 +4,21 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
     FaChartPie,
-    FaUsers,
     FaFileUpload,
     FaChess
 } from 'react-icons/fa';
 import { clsx } from 'clsx';
-
-const NAV_ITEMS = [
-    { label: 'Dashboard', href: '/', icon: FaChartPie },
-    { label: 'Upload Data', href: '/upload', icon: FaFileUpload },
-    { label: '2030 Plan', href: '/plan', icon: FaChess },
-    // { label: 'Employees', href: '/employees', icon: FaUsers },
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Sidebar() {
     const pathname = usePathname();
+    const { language, setLanguage, t } = useLanguage();
+
+    const NAV_ITEMS = [
+        { label: t('nav.dashboard'), href: '/', icon: FaChartPie },
+        { label: t('nav.upload'), href: '/upload', icon: FaFileUpload },
+        { label: t('nav.plan'), href: '/plan', icon: FaChess },
+    ];
 
     return (
         <aside className="fixed left-0 top-0 h-full w-64 bg-slate-900 text-white flex flex-col shadow-xl z-50">
@@ -50,7 +50,18 @@ export default function Sidebar() {
                 })}
             </nav>
 
-            <div className="p-4 border-t border-slate-800">
+            <div className="p-4 border-t border-slate-800 space-y-4">
+                {/* Language Toggle */}
+                <div className="bg-slate-800/50 rounded-lg p-3 flex items-center justify-between">
+                    <span className="text-xs text-slate-400 font-medium">Language / Taal</span>
+                    <button
+                        onClick={() => setLanguage(language === 'en' ? 'nl' : 'en')}
+                        className="flex items-center gap-2 px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs font-bold transition-colors"
+                    >
+                        <span>{language === 'en' ? '🇺🇸 EN' : '🇳🇱 NL'}</span>
+                    </button>
+                </div>
+
                 <div className="bg-slate-800 rounded-lg p-3">
                     <p className="text-xs text-slate-400">Environment</p>
                     <div className="flex items-center gap-2 mt-1">
