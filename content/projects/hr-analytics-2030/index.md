@@ -6,10 +6,7 @@ tags: ["Next.js", "TypeScript", "IndexedDB", "Predictive Analytics"]
 type: "App"
 summary: "A privacy-first predictive analytics platform. Features client-side AI for attrition modeling, interactive workforce planning scenarios, and secure CSV processing—all running 100% in your browser."
 weight: 10
-cover:
-  image: "/images/projects-banner.png" # Using standard banner for now, can be updated later
-  alt: "HR Analytics Dashboard"
-  relative: false
+
 ---
 
 ## What It Does
