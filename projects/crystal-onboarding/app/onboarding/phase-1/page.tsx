@@ -101,7 +101,7 @@ export default function Phase1Page() {
                     </div>
                 </section>
 
-                <div className="pt-8 flex justify-end">
+                <div className="pt-8 flex justify-center">
                     <Button
                         onClick={handleContinue}
                         disabled={!allHardwareChecked || !workStyle}

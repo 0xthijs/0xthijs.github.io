@@ -85,7 +85,7 @@ export default function Phase2Page() {
                     />
                 </div>
 
-                <div className="pt-8 flex justify-end">
+                <div className="pt-8 flex justify-center">
                     <Button
                         onClick={handleContinue}
                         disabled={!allAccountsChecked}

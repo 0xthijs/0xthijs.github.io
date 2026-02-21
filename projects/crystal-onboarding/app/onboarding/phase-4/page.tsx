@@ -102,7 +102,7 @@ export default function Phase4Page() {
                     )}
                 </section>
 
-                <div className="pt-8 flex justify-end">
+                <div className="pt-8 flex justify-center">
                     <Button
                         onClick={handleContinue}
                         disabled={!isFormComplete}
