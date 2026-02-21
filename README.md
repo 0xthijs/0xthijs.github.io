@@ -24,9 +24,10 @@ This repository serves as a portfolio of practical solutions — each project ad
 | 06 | [Job Market Intelligence](data-lab/job-intelligence/) | What skills are actually in demand? | AI Agents scrape & analyze job data for real-time market insights | Automated "Voice of the Market" strategy reports |
 | 07 | [Onboarding PoC](content/projects/onboarding-poc/) ([🚀 Live Demo](https://0xthijs.github.io/demos/onboarding-poc/index.html)) | Can pre-boarding be improved? | Gamified checklists reduce initial anxiety | Zero-config, browser-based deployment |
 | 08 | [Contract Generator](content/projects/automated-contract-generator/) ([🚀 Live Demo](https://0xthijs.github.io/demos/automated-contract-generator/index.html)) | Can contract drafting be automated? | Real-time validation reduces errors | 100% Client-side privacy & zero backend |
-| 09 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
-| 10 | [The 1:1 Architect](content/projects/one-on-one-architect/) ([⚡ Run Locally](content/projects/one-on-one-architect/)) | Can manager meetings be structured? | AI reframes complaints into data-driven strategy | Runs locally for complete privacy |
-| 11 | [🧠 SkillFlex Marketplace](content/projects/skillflex/) | **Can we retain talent via internal mobility?** | Matches skills to gigs + **Retention Logic** | Reduces flight risk via proactive matching |
+| 09 | [Crystal Onboarding](content/projects/crystal-onboarding/) ([🚀 Live Demo](https://0xthijs.github.io/demos/crystal-onboarding/index.html)) | Can pre-boarding feel premium and personalized? | 3D Interactive journey reduces anxiety | Modern Vogue aesthetic & Gamified flow |
+| 10 | [Network Visualizer](content/projects/ona-visualizer/) ([🚀 Live Demo](https://0xthijs.github.io/demos/ona-visualizer/index.html)) | **Who is actually driving change?** | Mapped the "Invisible Organization" beyond the Org Chart | Uncovered hidden influencers & critical retention risks |
+| 11 | [The 1:1 Architect](content/projects/one-on-one-architect/) ([⚡ Run Locally](content/projects/one-on-one-architect/)) | Can manager meetings be structured? | AI reframes complaints into data-driven strategy | Runs locally for complete privacy |
+| 12 | [🧠 SkillFlex Marketplace](content/projects/skillflex/) | **Can we retain talent via internal mobility?** | Matches skills to gigs + **Retention Logic** | Reduces flight risk via proactive matching |
 
 ---
 
@@ -77,6 +78,7 @@ I integrate AI tools throughout the development process. This repository demonst
 
 ## Project Log
 
+- **2026-02-21**: 🔮 **Added Project 12 (Crystal Onboarding)**. A premium, Next.js powered 3D interactive onboarding flow using React Three Fiber.
 - **2026-02-18**: 🤝 **Added Project 11 (SkillFlex)**. An AI-driven internal talent marketplace using Python/Flask to match employees to gigs based on inferred skills and retention risk.
 - **2026-02-15**: 🧹 **Added Project 05 (Data Governance)**. An automated pipeline for HR data stress-testing and auditing.
 - **2026-02-15**: 🗣️ **Added Project 10 (The 1:1 Architect)**. A Streamlit app to structure manager meetings, running locally for privacy.
