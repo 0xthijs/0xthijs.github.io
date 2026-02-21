@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4fbf4;
+  /* Hint of pastel sage green for a clean airy feel */
+  --foreground: #0d120d;
+  /* Very dark rich green-black */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #090c09;
+    /* Deep dark sage black */
+    --foreground: #f4fbf4;
+    /* Light sage white */
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
