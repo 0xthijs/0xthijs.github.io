@@ -11,6 +11,8 @@ weight: 15
 ## What It Does
 Crystal Onboarding is a highly interactive, premium onboarding experience designed to make the crucial first steps of a new hire feel less like filling out forms and more like an engaging, personalized journey.
 
+[🚀 **Launch Live Demo**](https://0xthijs.github.io/demos/crystal-onboarding/index.html)
+
 ## The Problem It Solves
 Standard enterprise onboarding is often a cold, transactional process of clicking checkboxes. This project reimagines the experience into a visually stunning, dynamic flow that reduces anxiety and builds anticipation for the first day.
 
