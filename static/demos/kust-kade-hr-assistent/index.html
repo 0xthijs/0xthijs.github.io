@@ -10,9 +10,519 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-  <style>[See full file in repository]</style>
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    :root {
+      --bg:           #F5F3EC;
+      --bg-alt:       #EDEAE2;
+      --bg-warm:      #F0EDE4;
+      --card-bg:      #FDFCF9;
+      --text:         #2E3128;
+      --text-muted:   #5C5F56;
+      --accent:       #2C5F6E;
+      --accent-light: #3A7A8C;
+      --accent-glow:  #4A9AAE;
+      --accent-deep:  #1E4552;
+      --accent-pale:  #E8F2F4;
+      --border:       #D4D0C8;
+      --border-dark:  #B8B3A8;
+      --dark:         #2E3128;
+      --sand:         #C8BFA8;
+      --sand-light:   #EDE8DC;
+      --success:      #7BA45E;
+      --warning:      #D9A84B;
+      --error:        #B7564C;
+    }
+
+    @supports (color: oklch(0 0 0)) {
+      :root {
+        --bg:           oklch(96% 0 0);
+        --bg-alt:       oklch(93.5% 0.01 0);
+        --bg-warm:      oklch(94% 0.015 40);
+        --card-bg:      oklch(99% 0 0);
+        --text:         oklch(18% 0 0);
+        --text-muted:   oklch(37% 0 0);
+        --accent:       oklch(42% 0.06 260);
+        --accent-light: oklch(50% 0.08 260);
+        --accent-glow:  oklch(58% 0.1 260);
+        --accent-deep:  oklch(28% 0.05 260);
+        --accent-pale:  oklch(94% 0.02 260);
+        --border:       oklch(83% 0.01 0);
+        --border-dark:  oklch(72% 0.015 0);
+        --dark:         oklch(18% 0 0);
+        --sand:         oklch(75% 0.02 70);
+        --sand-light:   oklch(93% 0.015 70);
+        --success:      oklch(58% 0.08 140);
+        --warning:      oklch(65% 0.12 60);
+        --error:        oklch(52% 0.1 20);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-light);
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+    }
+
+    main {
+      padding: 3rem 0;
+    }
+
+    section {
+      margin: 2rem 0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-alt) 100%);
+      padding: 4rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary {
+      background-color: var(--card-bg);
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-pale);
+    }
+
+    /* Chat Interface */
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: var(--accent);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .chat-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      max-height: 400px;
+      background: var(--card-bg);
+    }
+
+    .message {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+    }
+
+    .message-bubble {
+      padding: 0.75rem 1rem;
+      border-radius: 0.375rem;
+      max-width: 70%;
+      word-wrap: break-word;
+    }
+
+    .message.assistant .message-bubble {
+      background-color: var(--bg-alt);
+      color: var(--text);
+    }
+
+    .message.user .message-bubble {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .chat-input-area {
+      padding: 1.5rem;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chat-input-area input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .chat-input-area button {
+      padding: 0.75rem 1rem;
+    }
+
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(44, 95, 110, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .feature-card h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      nav {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .cta-group {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .chat-container {
+        max-width: 100%;
+      }
+
+      .message-bubble {
+        max-width: 90%;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
-  [Demo content preserved]
+  <header>
+    <div class="container">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="6" fill="#2E3128"/>
+          <path d="M2 20C6 14 10 26 14 20C18 14 22 26 26 20C28 17 30 18 30 20" stroke="#2C5F6E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M2 24C6 18 10 30 14 24C18 18 22 30 26 24C28 21 30 22 30 24" stroke="#3A7A8C" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+        </svg>
+        Kust & Kade Lab
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>HR Assistent</h1>
+        <p>Krijg direct antwoord op alle cao, verlof en verzuim vragen. 24/7 beschikbaar in uw taal.</p>
+        <div class="cta-group">
+          <button onclick="scrollToChat()">Chat starten</button>
+          <button class="btn-secondary">Meer informatie</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container">
+      <h2>Waarom HR Assistent?</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>24/7 Beschikbaar</h3>
+          <p>Werknemers kunnen altijd vragen stellen, zelfs buiten kantooruren.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cao Kennis</h3>
+          <p>Antwoorden op vragen over cao, arbeidsrecht en regelingen.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Verlof & Verzuim</h3>
+          <p>Duidelijke informatie over verlofrechten en verzuimprocedures.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Meertalig</h3>
+          <p>Ondersteuning in Nederlands, Engels en andere talen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="margin: 3rem 0;">
+      <h2>Probeer de HR Assistent</h2>
+      <div class="chat-container">
+        <div class="chat-header">
+          <h2>HR Assistent Chat</h2>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="message assistant">
+            <div class="message-bubble">
+              Hallo! Ik ben je HR Assistent. Stel mij vragen over cao, verlof, verzuim of andere HR-onderwerpen.
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-area">
+          <input 
+            type="text" 
+            id="userInput" 
+            placeholder="Stel een vraag..." 
+            onkeypress="if(event.key==='Enter') sendMessage()"
+          >
+          <button onclick="sendMessage()">Verzend</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2024 Kust & Kade. Alle rechten voorbehouden.</p>
+      <p>contact@kusteenkade.nl | +31 (0)10 123 4567</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const message = input.value.trim();
+      
+      if (!message) return;
+      
+      // Add user message
+      addMessage(message, 'user');
+      input.value = '';
+      
+      // Simulate AI response
+      setTimeout(() => {
+        const responses = [
+          'Goed vraag! Dit valt onder artikel 12 van de cao...',
+          'Je hebt recht op 25 verlofdagen per jaar...',
+          'Voor verzuim gelden deze richtlijnen...',
+          'Je kunt dit het best opnemen met je manager...'
+        ];
+        const response = responses[Math.floor(Math.random() * responses.length)];
+        addMessage(response, 'assistant');
+      }, 500);
+    }
+    
+    function addMessage(text, sender) {
+      const messagesDiv = document.getElementById('chatMessages');
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}`;
+      messageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(text)}</div>`;
+      messagesDiv.appendChild(messageDiv);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+    
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    function scrollToChat() {
+      document.querySelector('.chat-container').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
