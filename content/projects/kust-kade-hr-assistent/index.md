@@ -4,7 +4,7 @@ date: 2026-03-24
 tags: ["Tool", "AI", "HR", "Claude API", "Kust & Kade"]
 type: "Tool"
 summary: "An AI-powered HR assistant that gives instant, 24/7 answers to employee questions about collective labor agreements, leave, and absence policies — built for Kust & Kade."
-demo: "https://0xthijs.github.io/demos/kust-kade-hr-assistent/index.html"
+demo: "https://kustenkade.nl/demos/hr-assistent.html"
 weight: 20
 ---
 
@@ -12,7 +12,7 @@ weight: 20
 
 A conversational AI chatbot specifically configured for HR questions. Employees can ask questions about CAO (collective labor agreement), leave entitlements, sick leave procedures and get instant, accurate answers at any time of day. The tool provides 24/7 support without requiring HR staff intervention for routine policy questions.
 
-[🚀 **Launch Live Demo**](https://0xthijs.github.io/demos/kust-kade-hr-assistent/index.html)
+[🚀 **Launch Live Demo**](https://kustenkade.nl/demos/hr-assistent.html)
 
 ## The Problem It Solves
 
