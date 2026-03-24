@@ -9,3 +9,244 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+
+    :root {
+      --bg:           #F5F3EC;
+      --bg-alt:       #EDEAE2;
+      --bg-warm:      #F0EDE4;
+      --card-bg:      #FDFCF9;
+      --text:         #2E3128;
+      --text-muted:   #5C5F56;
+      --accent:       #2C5F6E;
+      --accent-light: #3A7A8C;
+      --accent-glow:  #4A9AAE;
+      --accent-deep:  #1E4552;
+      --accent-pale:  #E8F2F4;
+      --border:       #D4D0C8;
+      --border-dark:  #B8B3A8;
+      --dark:         #2E3128;
+      --sand:         #C8BFA8;
+      --sand-light:   #EDE8DC;
+      --success:      #7BA45E;
+      --warning:      #D9A84B;
+      --error:        #B7564C;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: 'Libre Baskerville', serif; line-height: 1.2; }
+    h1 { font-size: 2rem; margin: 0 0 1rem 0; }
+    h2 { font-size: 1.5rem; margin: 1.5rem 0 1rem 0; }
+    h3 { font-size: 1.25rem; margin: 1rem 0 0.75rem 0; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 600; font-size: 1.25rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+
+    main { padding: 2rem 0 4rem; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-alt) 100%);
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero p { font-size: 1.1rem; color: var(--text-muted); margin: 1rem 0; }
+
+    .cta { background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 0.375rem; cursor: pointer; transition: all 0.3s; }
+    .cta:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    input, textarea, select { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.375rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; }
+    textarea { resize: vertical; min-height: 100px; }
+
+    .form-container { background: var(--card-bg); padding: 2rem; border-radius: 0.5rem; border: 1px solid var(--border); max-width: 700px; margin: 0 auto; }
+
+    .plan-section { background: var(--card-bg); padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid var(--accent); border-radius: 0.375rem; }
+    .plan-section h3 { margin-top: 0; color: var(--accent); }
+    .plan-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+    .plan-section li { margin: 0.5rem 0; }
+
+    .output-box { background: var(--bg-alt); padding: 1.5rem; border-radius: 0.375rem; margin-top: 2rem; }
+
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      nav { flex-direction: column; gap: 1rem; }
+      .form-container { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Kust & Kade Lab</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#about">Over</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Ontwikkelkompas</h1>
+        <p>Van vaag ontwikkelingsdoel naar concreet 70-20-10 leerplan</p>
+        <button class="cta" onclick="document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth' })">Maak je plan</button>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="form-container">
+        <h2>Wat wil je bereiken?</h2>
+        
+        <div class="form-group">
+          <label for="currentRole">Huidige rol/positie</label>
+          <input type="text" id="currentRole" placeholder="bijv. Junior Product Manager" />
+        </div>
+
+        <div class="form-group">
+          <label for="targetRole">Gewenste rol/skill</label>
+          <input type="text" id="targetRole" placeholder="bijv. Product Owner, Leadership skills, Technical expertise" />
+        </div>
+
+        <div class="form-group">
+          <label for="currentSkills">Huidige sterktes (komma-gescheiden)</label>
+          <textarea id="currentSkills" placeholder="bijv. Data analysis, User research, Communication"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="timeline">Gewenste timeline</label>
+          <select id="timeline">
+            <option value="3months">3 maanden</option>
+            <option value="6months">6 maanden</option>
+            <option value="12months">12 maanden</option>
+            <option value="24months">2 jaar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="constraints">Beperkingen/context (optioneel)</label>
+          <textarea id="constraints" placeholder="bijv. Beperkte tijd beschikbaar, Nog geen budget voor training"></textarea>
+        </div>
+
+        <button class="cta" onclick="generatePlan()" style="width: 100%;">Genereer 70-20-10 Plan</button>
+
+        <div id="output" style="display: none;">
+          <div id="planContent"></div>
+          <button class="cta" onclick="downloadPlan()" style="width: 100%;">Download als PDF</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about">
+    <div class="container">
+      <h2>Het 70-20-10 Leermodel</h2>
+      <p><strong>70%</strong> Learning by Doing: Praktijkervaring en taken</p>
+      <p><strong>20%</strong> Learning with Others: Coaching, mentoring, feedback</p>
+      <p><strong>10%</strong> Learning from Others: Courses, books, training</p>
+      <p>&copy; 2024 Kust & Kade. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script>
+    function generatePlan() {
+      const currentRole = document.getElementById('currentRole').value;
+      const targetRole = document.getElementById('targetRole').value;
+      const currentSkills = document.getElementById('currentSkills').value;
+      const timeline = document.getElementById('timeline').value;
+
+      if (!currentRole || !targetRole) {
+        alert('Vul minimaal huidige rol en doel in');
+        return;
+      }
+
+      let planHTML = `<h2>Jouw Ontwikkelplan</h2>`;
+      planHTML += `<p><strong>Van:</strong> ${currentRole} → <strong>Naar:</strong> ${targetRole}</p>`;
+
+      planHTML += `<div class="plan-section">
+        <h3>70% - Learning by Doing</h3>
+        <p>Praktijkervaring en taken die direct relevant zijn:</p>
+        <ul>
+          <li>Lead je eerste project als ${targetRole.toLowerCase()}</li>
+          <li>Shadow experienced ${targetRole.toLowerCase()} voor 2-4 weken</li>
+          <li>Neem ownership van kern responsibilities</li>
+          <li>Wekelijks experimenteren met nieuwe skills</li>
+          <li>Feedback-cyclus inbouwen (wekelijks)</li>
+        </ul>
+      </div>`;
+
+      planHTML += `<div class="plan-section">
+        <h3>20% - Learning with Others</h3>
+        <p>Leer van ervaringen van anderen:</p>
+        <ul>
+          <li>1-op-1 mentoring sesies (wekelijks 30-45 min)</li>
+          <li>Peer learning group met gelijksgesinten</li>
+          <li>360-feedback sessie in maand 2 en 4</li>
+          <li>Code/work reviews en feedback cycles</li>
+          <li>Networking met experts in het veld</li>
+        </ul>
+      </div>`;
+
+      planHTML += `<div class="plan-section">
+        <h3>10% - Learning from Others</h3>
+        <p>Formele learning en kennisbronnen:</p>
+        <ul>
+          <li>Relevante online courses (2-3 uur/week)</li>
+          <li>Brancheboeken (1 boek per maand)</li>
+          <li>Podcasts en artikelen (2-3 uur/week)</li>
+          <li>Online certifications (indien relevant)</li>
+          <li>Conferenties/webinars (1x per kwartaal)</li>
+        </ul>
+      </div>`;
+
+      planHTML += `<div class="output-box">
+        <h3>Succes-indicatoren</h3>
+        <ul>
+          <li>Maandelijkse milestone controles</li>
+          <li>Feedback van mentor en collega's</li>
+          <li>Zelfevaluatie tegen doelstelling</li>
+          <li>Voltooing van geplande taken en learning</li>
+        </ul>
+      </div>`;
+
+      document.getElementById('planContent').innerHTML = planHTML;
+      document.getElementById('output').style.display = 'block';
+      document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function downloadPlan() {
+      alert('Zet je scherm om naar PDF via Ctrl+P en kies "Opslaan als PDF"');
+    }
+  </script>
+</body>
+</html>
