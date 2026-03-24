@@ -5,7 +5,7 @@ tags: ["Tool", "AI", "L&D", "Claude API", "Kust & Kade"]
 type: "Tool"
 summary: "An AI tool that transforms vague personal development goals into concrete 70-20-10 action plans — built for Kust & Kade's learning & development practice."
 demo: "https://kustenkade.nl/demos/ontwikkelkompas.html"
-weight: 23
+weight: 2
 ---
 
 ## What It Does
