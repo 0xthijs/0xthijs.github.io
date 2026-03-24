@@ -5,7 +5,7 @@ tags: ["Tool", "AI", "HR", "Claude API", "Kust & Kade"]
 type: "Tool"
 summary: "An AI-powered HR assistant that gives instant, 24/7 answers to employee questions about collective labor agreements, leave, and absence policies — built for Kust & Kade."
 demo: "https://kustenkade.nl/demos/hr-assistent.html"
-weight: 20
+weight: 1
 ---
 
 ## What It Does
