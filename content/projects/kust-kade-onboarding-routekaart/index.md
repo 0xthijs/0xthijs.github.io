@@ -5,7 +5,7 @@ tags: ["Tool", "Onboarding", "HR", "Kust & Kade"]
 type: "Tool"
 summary: "A static interactive tool that generates a personalised 4-week onboarding roadmap for new employees — practical, visual, and ready to use on day one."
 demo: "https://kustenkade.nl/demos/onboarding-routekaart.html"
-weight: 22
+weight: 3
 ---
 
 ## What It Does
