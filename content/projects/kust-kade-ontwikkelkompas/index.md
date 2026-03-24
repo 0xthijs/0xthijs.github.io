@@ -4,7 +4,7 @@ date: 2026-03-24
 tags: ["Tool", "AI", "L&D", "Claude API", "Kust & Kade"]
 type: "Tool"
 summary: "An AI tool that transforms vague personal development goals into concrete 70-20-10 action plans — built for Kust & Kade's learning & development practice."
-demo: "https://0xthijs.github.io/demos/kust-kade-ontwikkelkompas/index.html"
+demo: "https://kustenkade.nl/demos/ontwikkelkompas.html"
 weight: 23
 ---
 
@@ -12,7 +12,7 @@ weight: 23
 
 Employees or L&D coaches enter a development goal and the tool generates a structured 70-20-10 action plan: 70% on-the-job learning, 20% social/peer learning, 10% formal training — all concretely tailored to the goal. The result is an immediately actionable personal development roadmap.
 
-[🚀 **Launch Live Demo**](https://0xthijs.github.io/demos/kust-kade-ontwikkelkompas/index.html)
+[🚀 **Launch Live Demo**](https://kustenkade.nl/demos/ontwikkelkompas.html)
 
 ## The Problem It Solves
 
