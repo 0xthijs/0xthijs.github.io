@@ -4,7 +4,7 @@ date: 2026-03-24
 tags: ["Tool", "Onboarding", "HR", "Kust & Kade"]
 type: "Tool"
 summary: "A static interactive tool that generates a personalised 4-week onboarding roadmap for new employees — practical, visual, and ready to use on day one."
-demo: "https://0xthijs.github.io/demos/kust-kade-onboarding-routekaart/index.html"
+demo: "https://kustenkade.nl/demos/onboarding-routekaart.html"
 weight: 22
 ---
 
@@ -12,7 +12,7 @@ weight: 22
 
 HR or a manager fills in details about a new hire (role, team, start date) and instantly gets a structured 4-week onboarding plan with weekly goals, tasks, and check-in moments. The plan is personalized to the specific role and team, making every new employee's first month clear and structured.
 
-[🚀 **Launch Live Demo**](https://0xthijs.github.io/demos/kust-kade-onboarding-routekaart/index.html)
+[🚀 **Launch Live Demo**](https://kustenkade.nl/demos/onboarding-routekaart.html)
 
 ## The Problem It Solves
 
