@@ -9,3 +9,237 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    :root {
+      --bg:           #F5F3EC;
+      --bg-alt:       #EDEAE2;
+      --card-bg:      #FDFCF9;
+      --text:         #2E3128;
+      --text-muted:   #5C5F56;
+      --accent:       #2C5F6E;
+      --accent-light: #3A7A8C;
+      --accent-glow:  #4A9AAE;
+      --accent-deep:  #1E4552;
+      --accent-pale:  #E8F2F4;
+      --border:       #D4D0C8;
+      --dark:         #2E3128;
+      --sand:         #C8BFA8;
+      --success:      #7BA45E;
+      --warning:      #D9A84B;
+      --error:        #B7564C;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: 'Libre Baskerville', serif; line-height: 1.2; }
+    h1 { font-size: 2rem; margin: 0 0 1rem 0; }
+    h2 { font-size: 1.5rem; margin: 1.5rem 0 1rem 0; }
+    h3 { font-size: 1.25rem; margin: 1rem 0 0.75rem 0; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 600; font-size: 1.25rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+
+    main { padding: 2rem 0 4rem; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero p { font-size: 1.1rem; color: var(--text-muted); margin: 1rem 0; }
+
+    .cta { background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 0.375rem; cursor: pointer; transition: all 0.3s; }
+    .cta:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    input, textarea, select { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.375rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; }
+    textarea { resize: vertical; min-height: 100px; }
+
+    .form-container { background: var(--card-bg); padding: 2rem; border-radius: 0.5rem; border: 1px solid var(--border); max-width: 700px; margin: 0 auto; }
+
+    .roadmap { margin: 3rem 0; }
+    .week { background: var(--card-bg); padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid var(--accent); border-radius: 0.375rem; }
+    .week h3 { margin-top: 0; color: var(--accent); }
+    .week ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+    .week li { margin: 0.5rem 0; }
+
+    .output-box { background: var(--bg-alt); padding: 1.5rem; border-radius: 0.375rem; margin-top: 2rem; }
+    .output-box h3 { margin-top: 0; }
+
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      nav { flex-direction: column; gap: 1rem; }
+      .form-container { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Kust & Kade Lab</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#features">Features</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Onboarding Routekaart Generator</h1>
+        <p>Genereer in minuten een persoonlijke 4-weken routekaart voor nieuwe medewerkers</p>
+        <button class="cta" onclick="document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth' })">Aan de slag</button>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="form-container">
+        <h2>Genereer routekaart</h2>
+        
+        <div class="form-group">
+          <label for="employeeName">Naam nieuwe medewerker</label>
+          <input type="text" id="employeeName" placeholder="bijv. Johan Jansen" />
+        </div>
+
+        <div class="form-group">
+          <label for="jobTitle">Functietitel</label>
+          <input type="text" id="jobTitle" placeholder="bijv. Senior Software Engineer" />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Afdeling</label>
+          <input type="text" id="department" placeholder="bijv. Product & Engineering" />
+        </div>
+
+        <div class="form-group">
+          <label for="teamSize">Grootte van het team</label>
+          <select id="teamSize">
+            <option value="small">Klein (2-5 personen)</option>
+            <option value="medium">Gemiddeld (5-15 personen)</option>
+            <option value="large">Groot (15+ personen)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="priorities">Prioriteiten voor onboarding (komma-gescheiden)</label>
+          <textarea id="priorities" placeholder="bijv. Technical setup, Team culture, Client relationships"></textarea>
+        </div>
+
+        <button class="cta" onclick="generateRoadmap()" style="width: 100%;">Genereer routekaart</button>
+
+        <div id="output" style="display: none;">
+          <div class="roadmap" id="roadmapContent"></div>
+          <button class="cta" onclick="downloadPDF()" style="width: 100%;">Download als PDF</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="features">
+    <div class="container">
+      <h2>Waarom deze routekaart?</h2>
+      <p>Een goed onboarding proces verhoogt retentie met 25% en vermindert time-to-productivity.</p>
+      <p>&copy; 2024 Kust & Kade. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script>
+    const weekTemplates = {
+      week1: {
+        title: 'Week 1: Orientatie & Setup',
+        tasks: ['IT Setup (laptop, accounts, tools)', 'Office tour & facilities', 'Team introductions', 'Role & responsibilities overview', 'First week schedule']
+      },
+      week2: {
+        title: 'Week 2: Kennismaking & Learning',
+        tasks: ['Product/service deep dive', 'Key processes overview', 'Meet key stakeholders', 'Initial projects kickoff', 'Culture & values session']
+      },
+      week3: {
+        title: 'Week 3: Integration & Practice',
+        tasks: ['First meaningful project work', 'Regular 1-on-1 check-ins start', 'Skill assessments', 'Mentor/buddy sessions', 'Team collaboration']
+      },
+      week4: {
+        title: 'Week 4: Independence & Goals',
+        tasks: ['Solo project ownership beginning', 'First month feedback review', '30-60-90 day goals setting', 'Performance metrics intro', 'Growth path planning']
+      }
+    };
+
+    function generateRoadmap() {
+      const employeeName = document.getElementById('employeeName').value;
+      const jobTitle = document.getElementById('jobTitle').value;
+      const department = document.getElementById('department').value;
+      const teamSize = document.getElementById('teamSize').value;
+      const priorities = document.getElementById('priorities').value;
+
+      if (!employeeName || !jobTitle) {
+        alert('Vul minimaal naam en functie in');
+        return;
+      }
+
+      let roadmapHTML = `<h2>Onboarding Routekaart: ${employeeName}</h2><p><strong>${jobTitle}</strong> in ${department}</p>`;
+
+      if (priorities) {
+        roadmapHTML += `<p><strong>Focus gebieden:</strong> ${priorities}</p>`;
+      }
+
+      Object.values(weekTemplates).forEach(week => {
+        roadmapHTML += `<div class="week"><h3>${week.title}</h3><ul>`;
+        week.tasks.forEach(task => {
+          roadmapHTML += `<li>${task}</li>`;
+        });
+        roadmapHTML += `</ul></div>`;
+      });
+
+      roadmapHTML += `<div class="output-box"><h3>Volgende stappen</h3><ul><li>Print of delen met mentor/buddy</li><li>Update wekelijks met voortgang</li><li>Aanpassen op basis van feedback</li><li>30-day review plannen</li></ul></div>`;
+
+      document.getElementById('roadmapContent').innerHTML = roadmapHTML;
+      document.getElementById('output').style.display = 'block';
+      document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function downloadPDF() {
+      alert('PDF download: zet in browser print naar PDF (Ctrl+P)');
+    }
+  </script>
+</body>
+</html>
